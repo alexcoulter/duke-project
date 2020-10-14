@@ -27,13 +27,34 @@ svg {
   overflow: hidden;
 }
 
+#tree-page-content {
+  min-height: calc(100% - 70px) !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: -60px;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgb(112, 130, 148), rgb(59,72,113));
+    
+}
+
+#page-content {
+  min-height: 100% !important;
+  width: 100%;
+  margin-bottom: -60px;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgb(112, 130, 148), rgb(59,72,113));
+    
+}
+
 #treeContainer {
   font-size: 11px;
   overflow: auto;
   position: relative;
   background-color:rgba(255, 255, 255, .9);
   z-index: 100;
-  margin-bottom: 80px;
+  margin-bottom: 63px;
+  /* margin-top: 80px; */
 }
 
 .node-text {
@@ -127,7 +148,7 @@ a:hover, a:active {
   /* margin-bottom: 100px;
   margin-left:45%; */
   position: absolute; 
-  bottom: 0px;
+  bottom: 10px;
   left: 45%;
 }
 
@@ -216,22 +237,13 @@ a:hover, a:active {
   /* font-weight: bold; */
 }
 
-#page-content {
-  min-height: 100% !important;
-  width: 100%;
-  margin-bottom: -60px;
-  position: relative;
-  background-image: linear-gradient(to bottom right, rgb(46, 60, 73), rgb(59,72,113));
-    
-}
-
 /* .push {
   margin-bottom: 60px;
   height: 60px;
   } */
 
 #sticky-footer {
-  background-color: rgba(40, 40, 40, .8);
+  background-color: rgba(40, 40, 40, .95);
   color: whitesmoke !important;
   text-align: center;
   height: 60px;

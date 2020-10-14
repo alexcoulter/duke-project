@@ -106,7 +106,7 @@ function update(source) {
       let widthDiff = width-screen.width;
       let levels = 6;
       let screenShift = widthDiff / levels;
-      console.log(d.depth);
+      // console.log(d.depth);
       let depth = d.depth + 1;
       if(depth > 2) {
       scrollScreen(depth * screenShift);

@@ -10,7 +10,7 @@ $(".data-button").click(function(){
   $(".data-button").removeClass("active");
   $(this).addClass("active");
   var choiceID = $(this).attr("data-id");
-  console.log(choiceID);
+  // console.log(choiceID);
   propogateChoices(choiceID);
 });
 
