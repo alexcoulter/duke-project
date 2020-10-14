@@ -1,0 +1,62 @@
+[
+  {
+    "name": "<div class = 'node-text'><p  class='h6' class='h6'>Born abroad to US Parents</p></div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><p  class='h6'>Born in Wedlock </p></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'>Accepts biological relationship</div>",
+            "outcome": "pos"
+          },
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>Suspects fraudulent  relationship </p> </div>",
+            "outcome": "neg",
+            "children": [
+              {
+                "name": "<div class = 'node-text'>Consular office establishes proof</div>",
+                "outcome": "pos"
+              },
+              { "name": "<div class = 'node-text'>Voluntary DNA test</div>" },
+              {
+                "name": "<div class = 'node-text'>Abandons citizenship claim</div>",
+                "outcome": "neg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>Born out of Wedlock</div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>Born to US Citizen Father </p></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'>Accepts biological relationship</div>",
+                "outcome": "pos"
+              },
+              {
+                "name": "<div class = 'node-text'><p  class='h6'>Suspects fraudulent  relationship </p></div>",
+                "outcome": "neg"
+              }
+            ]
+          },
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>Born to US Citizen Mother </p> <a href='https://www.law.cornell.edu/uscode/text/8/1409' target='_'> 8 USC §1409c </a> | Conditions for Citizenship</p></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'>Accepts biological relationship</div",
+                "outcome": "pos"
+              },
+              {
+                "name": "<div class = 'node-text'><p  class='h6'>Suspects fraudulent  relationship</div>",
+                "outcome": "neg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

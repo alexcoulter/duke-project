@@ -73,7 +73,7 @@ function redirectUser(id) {
       window.location.href = 'index3.html';
       break;
     case "4":
-      window.location.href = 'newTree.html';
+      window.location.href = 'tree4.html';
       break;
     default:
       alert("something went wrong");

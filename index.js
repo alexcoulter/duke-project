@@ -103,7 +103,14 @@ function update(source) {
     .append("g")
     .attr("class", "node")
     .attr("transform", function (d) {
-      scrollScreen(d.depth * 300 - 300);
+      let widthDiff = width-screen.width;
+      let levels = 6;
+      let screenShift = widthDiff / levels;
+      console.log(d.depth);
+      let depth = d.depth + 1;
+      if(depth > 2) {
+      scrollScreen(depth * screenShift);
+      }
       return "translate(" + source.y0 + "," + source.x0 + ")";
     })
     .on("click", delayClick);
@@ -150,7 +157,7 @@ function update(source) {
     .transition()
     .duration(duration)
     .attr("transform", function (d) {
-      return "translate(" + d.y / 0.99 + "," + d.x / 1.02 + ")";
+      return "translate(" + d.y / 0.99 + "," + d.x / 1.04 + ")";
     });
 
   nodeUpdate
@@ -201,7 +208,17 @@ function update(source) {
     .duration(duration * .7)
     .attr("transform", function (d) {
       //Scrolls screen to left 200px
-      scrollScreen(d.depth * 300 - 600);
+      // scrollScreen(d.depth * 300 - 600);
+      let widthDiff = width-screen.width;
+      let levels = 6;
+      let screenShift = widthDiff / levels;
+      let depth = d.depth;
+      if(depth > 2) {
+      scrollScreen((depth * screenShift) - (screenShift));
+      }
+      else {
+        scrollScreen(0);
+      }
       return "translate(" + source.y + "," + source.x + ")";
     })
     .remove();
