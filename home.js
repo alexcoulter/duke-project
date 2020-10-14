@@ -26,7 +26,7 @@ function propogateChoices(id) {
   switch(id) {
     case "1":
     var li = $("<li>").text("I am a migrant who was arrested but not detained").attr("data-id", 1);
-    var li2 = $("<li>").text("I am a migrant who was arrested but set free").attr("data-id", 2);
+    var li2 = $("<li>").text("I am a migrant detained at the border wall without inspection").attr("data-id", 2);
     var li3 = $("<li>").text("I am a migrant who was apprehended by the law but not arrested").attr("data-id", 3);
     var li4 = $("<li>").text("I am a migrant who was not apprehended by the law").attr("data-id", 4);
 
