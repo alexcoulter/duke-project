@@ -1,0 +1,53 @@
+[
+  {
+    "name": "<div class = 'node-text'>Migrant</div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text'>Apprehended By <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
+        "outcome": "neg",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p  class='h6'> Detained & Charged with Civil or Criminal Offense </p> 1325 | Improper Entry <br> 1326 | Reentry of Removed Alien</div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'>If 14+ unless exception applies</div>",
+                "outcome": "neg",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text'>DNA test is mandatory as per 2005 DNA Fingerprint Act | 28 C.F.R. 28.12</div>",
+                    "children": [{ "name": "<div class = 'node-text'>DNA is entered into FBI CODIS<button class = 'popup-btn popup' id='popup2'>+</button></div>" }]
+                  }
+                ]
+              },
+              {
+                "name": "<div class = 'node-text'>Exceptions</div>",
+                "outcome": "pos",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text'>Alien lawfully in, or being processed for lawful admission</div>",
+                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                  },
+                  {
+                    "name": "<div class = 'node-text'>Alien held at port of entry during consideration of admissibility and not subject to further detention or proceedings<div>",
+                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                  },
+                  {
+                    "name": "<div class = 'node-text'>Aliens held in connection with  maritime interdiction</div>",
+                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "<div class = 'node-text'>Detained, but not charged</div>"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>Not Apprehended by <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
+        "outcome": "pos"
+      }
+    ]
+  }
+]
