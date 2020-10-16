@@ -34,8 +34,7 @@ svg {
   align-items: center;
   margin-bottom: -60px;
   position: relative;
-  background-image: linear-gradient(to bottom right, rgb(112, 130, 148), rgb(59,72,113));
-    
+  background-image: linear-gradient(to bottom right, rgb(112, 130, 148), rgb(59,72,113)); 
 }
 
 #page-content {
@@ -152,6 +151,10 @@ a:hover, a:active {
   left: 45%;
 }
 
+#detainedBig {
+  
+}
+
 
 
 
@@ -179,7 +182,7 @@ a:hover, a:active {
 }
 
 .mid-section {
-  padding: 50px 0 110px 0;
+  padding: 50px 0 60px 0;
   background-color: whitesmoke;
 }
 
@@ -206,7 +209,12 @@ a:hover, a:active {
   border-radius: 5px;
   color:white;
   background: #0275d8 !important;
+  margin-bottom: 100px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .26), 0 10px 10px 0 rgba(0, 0, 0, .22);
+}
+
+#textChoices {
+  display: none;
 }
 
 .text-choices li {

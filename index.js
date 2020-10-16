@@ -22,7 +22,7 @@ var colorScale = d3.scaleOrdinal("schemeSet2");
 // Set the dimensions and margins of the diagram
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
   width = 2200 - margin.left - margin.right,
-  height = 700 - margin.top - margin.bottom;
+  height = 900 - margin.top - margin.bottom;
 
 var textbox_w = 270, //was 336
   textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
@@ -103,13 +103,13 @@ function update(source) {
     .append("g")
     .attr("class", "node")
     .attr("transform", function (d) {
-      let widthDiff = width-screen.width;
+      let widthDiff = width - screen.width;
       let levels = 6;
       let screenShift = widthDiff / levels;
       // console.log(d.depth);
       let depth = d.depth + 1;
-      if(depth > 2) {
-      scrollScreen(depth * screenShift);
+      if (depth > 2) {
+        scrollScreen(depth * screenShift);
       }
       return "translate(" + source.y0 + "," + source.x0 + ")";
     })
@@ -133,12 +133,14 @@ function update(source) {
     .append("foreignObject")
     .attr("class", "txt")
     .attr("width", textbox_w - 10)
-    .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 96)) //adjust this to ensure all text shown
+    .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 100)) //adjust this to ensure all text shown
     .style("transform", (d) =>
       d.data.clauses === 3
         ? "translateX(10px) translateY(-" + (textbox_h / 2 - 26) + "px)"
         : d.data.yadjust === "down"
           ? "translateX(10px) translateY(-" + (textbox_h / 2 - 20) + "px)"
+          : d.data.yadjust === "up"
+          ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
           : d.data.type === "law"
             ? "translateX(10px) translateY(-" + (textbox_h / 2 - 10) + "px)"
             : "translateX(28px) translateY(-8px)"
@@ -157,7 +159,7 @@ function update(source) {
     .transition()
     .duration(duration)
     .attr("transform", function (d) {
-      return "translate(" + d.y / 0.99 + "," + d.x / 1.04 + ")";
+      return "translate(" + d.y / 0.99 + "," + d.x / 1.03 + ")";
     });
 
   nodeUpdate
@@ -209,12 +211,12 @@ function update(source) {
     .attr("transform", function (d) {
       //Scrolls screen to left 200px
       // scrollScreen(d.depth * 300 - 600);
-      let widthDiff = width-screen.width;
+      let widthDiff = width - screen.width;
       let levels = 6;
       let screenShift = widthDiff / levels;
       let depth = d.depth;
-      if(depth > 2) {
-      scrollScreen((depth * screenShift) - (screenShift));
+      if (depth > 2) {
+        scrollScreen((depth * screenShift) - (screenShift));
       }
       else {
         scrollScreen(0);
@@ -286,12 +288,12 @@ function update(source) {
   }
 
   function delayClick(d) {
-    setTimeout(function(){ click(d); }, 10);
+    setTimeout(function () { click(d); }, 10);
   }
 
   // Toggle children on click.
   function click(d) {
-    if(expanded === true) {
+    if (expanded === true) {
       return expanded = false;
     }
     if (d.children) {
@@ -310,7 +312,7 @@ function update(source) {
   function scrollScreen(pos) {
     container.scrollTo({
       top: 0,
-      left:  pos,
+      left: pos,
       behavior: 'smooth'
     });
   }
@@ -320,9 +322,9 @@ function update(source) {
 // $(".popup").on("click", function() {
 //   exp3 = true;
 // })
-  $(document).on("click", ".popup", function() {
-    expanded = true;
-    fillModal($(this).attr("id"));
-       $("#exampleModal").modal();
-     
-  });
+$(document).on("click", ".popup", function () {
+  expanded = true;
+  fillModal($(this).attr("id"));
+  $("#exampleModal").modal();
+
+});

@@ -7,7 +7,7 @@
         "outcome": "neg",
         "children": [
           {
-            "name": "<div class = 'node-text'><p  class='h6'> Detained & Charged with Civil or Criminal Offense </p> 1325 | Improper Entry <br> 1326 | Reentry of Removed Alien</div>",
+            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained & Charged with Civil or Criminal Offense </p> 1325 | Improper Entry <br> 1326 | Reentry of Removed Alien</div>",
             "children": [
               {
                 "name": "<div class = 'node-text'>If 14+ unless exception applies</div>",
