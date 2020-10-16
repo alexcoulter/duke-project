@@ -44,21 +44,21 @@ function propogateChoices(id) {
       window.location.href = "#textChoices";
       break;
 
-    case "3":
-      var li = $("<li>").text("I have a spouse who was born in the United States").attr("data-id", 1);
-      var li2 = $("<li>").text("I have a spouse who was not born in the United States but has lived here for 5 years").attr("data-id", 2);
-      var li3 = $("<li>").text("I have a spouse who was detained at the border").attr("data-id", 3);
-      var li4 = $("<li>").text("I have a spouse who was taken into custody").attr("data-id", 4);
-      $("#textChoices").append(li, li2, li3, li4);
-      $("#textChoices").fadeTo( "fast", 1 );
-      window.location.href = "#textChoices";
-      break;
-
-    case "4":
+      case "3":
       var li = $("<li>").text("I have a child who was born in the United States").attr("data-id", 1);
       var li2 = $("<li>").text("I have a child who was not born in the United States but has lived here for 5 years").attr("data-id", 2);
       var li3 = $("<li>").text("I have a child who was detained at the border").attr("data-id", 3);
       var li4 = $("<li>").text("I have a child who was taken into custody").attr("data-id", 4);
+      $("#textChoices").append(li, li2, li3, li4);
+      $("#textChoices").fadeTo( "fast", 1 );
+      window.location.href = "#textChoices";
+      break;
+      
+    case "4":
+      var li = $("<li>").text("I have a spouse who was born in the United States").attr("data-id", 1);
+      var li2 = $("<li>").text("I have a spouse who was not born in the United States but has lived here for 5 years").attr("data-id", 2);
+      var li3 = $("<li>").text("I have a spouse who was detained at the border").attr("data-id", 3);
+      var li4 = $("<li>").text("I have a spouse who was taken into custody").attr("data-id", 4);
       $("#textChoices").append(li, li2, li3, li4);
       $("#textChoices").fadeTo( "fast", 1 );
       window.location.href = "#textChoices";
