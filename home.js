@@ -25,10 +25,10 @@ function propogateChoices(id) {
 
   switch(id) {
     case "1":
-    var li = $("<li>").text("I am a migrant who was arrested but not detained").attr("data-id", 1);
-    var li2 = $("<li>").text("I am a migrant detained at the border wall without inspection").attr("data-id", 2);
-    var li3 = $("<li>").text("I am a migrant who was apprehended by the law but not arrested").attr("data-id", 3);
-    var li4 = $("<li>").text("I am a migrant who was not apprehended by the law").attr("data-id", 4);
+    var li = $("<li>").text("I am a migrant seeking a family-based visa").attr("data-id", 1);
+    var li2 = $("<li>").text("I am a migrant seeking asylum").attr("data-id", 2);
+    var li3 = $("<li>").text("I am a migrant who has entered the country without inspection").attr("data-id", 3);
+    var li4 = $("<li>").text("I am a migrant who is seeking a temporary work visa").attr("data-id", 4);
     $("#textChoices").fadeTo( "fast", 1 )
     $("#textChoices").append(li, li2, li3, li4);
     window.location.href = "#textChoices";
@@ -80,7 +80,7 @@ function redirectUser(id) {
       window.location.href = 'tree2.html';
       break;
     case "3":
-      window.location.href = 'index3.html';
+      window.location.href = 'tree2.html';
       break;
     case "4":
       window.location.href = 'tree4.html';

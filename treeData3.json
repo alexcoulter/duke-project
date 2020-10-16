@@ -7,14 +7,14 @@
         "outcome": "neg",
         "children": [
           {
-            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained & Charged with Civil or Criminal Offense </p> 1325 | Improper Entry <br> 1326 | Reentry of Removed Alien</div>",
+            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained & Charged with <span class = 'popup-text popup' id='popupCivil'>Civil or Criminal Offense</span> </p></div>",
             "children": [
               {
                 "name": "<div class = 'node-text'>If 14+ unless exception applies</div>",
                 "outcome": "neg",
                 "children": [
                   {
-                    "name": "<div class = 'node-text'>DNA test is mandatory as per 2005 DNA Fingerprint Act | 28 C.F.R. 28.12</div>",
+                    "name": "<div class = 'node-text'><p>DNA test is mandatory as per <a class ='popup-text' href='https://www.govinfo.gov/content/pkg/STATUTE-119/pdf/STATUTE-119-Pg2960.pdf' target='_blank'> 2005 DNA Fingerprint Act | 28 C.F.R. 28.12</a></p></div>",
                     "children": [{ "name": "<div class = 'node-text'>DNA is entered into FBI CODIS<button class = 'popup-btn popup' id='popup2'>+</button></div>" }]
                   }
                 ]

@@ -20,9 +20,9 @@ $("#homeBtn").on("click", function () {
 var colorScale = d3.scaleOrdinal("schemeSet2");
 
 // Set the dimensions and margins of the diagram
-var margin = { top: 20, right: 90, bottom: 30, left: 90 },
+var margin = { top: 0, right: 90, bottom: 30, left: 90 },
   width = 2200 - margin.left - margin.right,
-  height = 900 - margin.top - margin.bottom;
+  height = 700 - margin.top - margin.bottom;
 
 var textbox_w = 270, //was 336
   textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
