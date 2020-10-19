@@ -53,7 +53,7 @@ function propogateChoices(id) {
       $("#textChoices").fadeTo( "fast", 1 );
       window.location.href = "#textChoices";
       break;
-      
+
     case "4":
       var li = $("<li>").text("I have a spouse who was born in the United States").attr("data-id", 1);
       var li2 = $("<li>").text("I have a spouse who was not born in the United States but has lived here for 5 years").attr("data-id", 2);
@@ -74,15 +74,19 @@ function propogateChoices(id) {
 function redirectUser(id) {
   switch(id) {
     case "1":
+      // localStorage.setItem("tree", "treeData2.json");
       window.location.href = 'tree1.html';
       break;
     case "2":
+      // localStorage.setItem("tree", "treeData3.json");
       window.location.href = 'tree2.html';
       break;
     case "3":
+      // localStorage.setItem("tree", "treeData3.json");
       window.location.href = 'tree2.html';
       break;
     case "4":
+      // localStorage.setItem("tree", "treeData4.json");
       window.location.href = 'tree4.html';
       break;
     default:

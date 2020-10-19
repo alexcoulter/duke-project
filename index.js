@@ -103,8 +103,9 @@ function update(source) {
     .append("g")
     .attr("class", "node")
     .attr("transform", function (d) {
-      let widthDiff = width - screen.width;
-      let levels = 6;
+      let widthDiff = width - window.innerWidth;
+      // let levels = 6;
+      console.log(levels);
       let screenShift = widthDiff / levels;
       // console.log(d.depth);
       let depth = d.depth + 1;

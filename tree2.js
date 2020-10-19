@@ -1,4 +1,5 @@
 var tree = "treeData3.json";
+var levels = 6; 
 
 function fillModal(id) {
   switch(id) {

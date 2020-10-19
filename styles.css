@@ -162,6 +162,10 @@ a:hover, a:active {
 /* ************HomePage Styles*************** */
 .my-nav {
   padding: 15px;
+  position: fixed;
+  top:0;
+  width: 100%;
+  border-bottom: 1px solid grey;
 }
 
 .espanol-link {
@@ -172,12 +176,34 @@ a:hover, a:active {
   color: rgb(149, 255, 149) !important;
 }
 
+#topImgDiv {
+  width: 100%;
+  padding:300px 100px;
+  border-bottom: 2px solid grey;
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('https://cdn.pixabay.com/photo/2018/02/04/09/03/migration-3129340_960_720.jpg');
+  /* background-image: url("https://cdn.pixabay.com/photo/2018/02/04/09/03/migration-3129340_960_720.jpg"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+  text-align: center;
+}
+
+#topImgDiv h1 {
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .46);
+  border-radius: 8px;
+  display: inline-block;
+  padding: 20px;
+}
+
 .top-section {
   /* background-image: url("https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
    background-repeat: no-repeat;
   background-size: cover; */
   background-color: rgba(100, 127, 158, .3);
-  margin-bottom: 30px;
+  /* margin-bottom: 30px; */
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .12), 0 10px 10px 0 rgba(0, 0, 0, .12);
 }
 
@@ -196,6 +222,7 @@ a:hover, a:active {
   min-height: 200px;
   font-size: 24px;
   color: rgb(248, 248, 179);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .32), 0 10px 10px 0 rgba(0, 0, 0, .32);
 }
 
 .dDown-menu .active{
@@ -217,6 +244,10 @@ a:hover, a:active {
   display: none;
 }
 
+#textChoicesDiv {
+  min-height: 340px;
+}
+
 .text-choices li {
   border: 1px solid white;
   font-size: 24px;
@@ -232,7 +263,7 @@ a:hover, a:active {
 .about-text {
   font-size: 14px;
   /* border: 1px solid grey; */
-  margin: 60px 10px;
+  margin: 100px 10px;
   padding: 30px;
   background-color: #ffffff;
   border-radius: 5px;
