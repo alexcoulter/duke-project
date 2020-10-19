@@ -3,6 +3,8 @@
 //   var selText = $(this).text();
 //   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 // });
+$("#titleHeader").css( "opacity", 0 );
+$("#titleHeader").fadeTo( "slow", 1 );
 
 $(".data-button").click(function(){
   $("#textChoices").empty();
@@ -21,7 +23,7 @@ $("#textChoices").bind("click", function(e){
 
 function propogateChoices(id) {
   // console.log(id);
-  $("#textChoices").css( "opacity", 0 )
+  $("#textChoices").css( "opacity", 0 );
 
   switch(id) {
     case "1":
@@ -29,7 +31,7 @@ function propogateChoices(id) {
     var li2 = $("<li>").text("I am a migrant seeking asylum").attr("data-id", 2);
     var li3 = $("<li>").text("I am a migrant who has entered the country without inspection").attr("data-id", 3);
     var li4 = $("<li>").text("I am a migrant who is seeking a temporary work visa").attr("data-id", 4);
-    $("#textChoices").fadeTo( "fast", 1 )
+    $("#textChoices").fadeTo( "fast", 1 );
     $("#textChoices").append(li, li2, li3, li4);
     window.location.href = "#textChoices";
       break;
