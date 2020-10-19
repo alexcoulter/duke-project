@@ -166,6 +166,7 @@ a:hover, a:active {
   top:0;
   width: 100%;
   border-bottom: 1px solid grey;
+  z-index:101;
 }
 
 .espanol-link {
@@ -202,16 +203,37 @@ a:hover, a:active {
   /* background-image: url("https://images.pexels.com/photos/242236/pexels-photo-242236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
    background-repeat: no-repeat;
   background-size: cover; */
-  background-color: rgba(100, 127, 158, .3);
+  /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(100, 127, 158, 1) ); */
+  background-color: rgb(54, 73, 95);
   /* margin-bottom: 30px; */
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .12), 0 10px 10px 0 rgba(0, 0, 0, .12);
+  z-index: 1;
+  position: relative;
+}
+
+.top-section:after {
+  background: inherit;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: skewY(-2.5deg);
+  transform-origin: 100%;
+  z-index: -1;
 }
 
 .mid-section {
-  padding: 50px 0 60px 0;
+  padding: 150px 0 60px 0;
   background-color: whitesmoke;
 }
 
+.dropdown-buttons h1 {
+  width: 100%;
+  font-weight: bold;
+}
 .dDown-menu {
   text-align: center;
   margin-bottom: 30px;
@@ -261,11 +283,11 @@ a:hover, a:active {
 }
 
 .about-text {
-  font-size: 14px;
+  font-size: 15px;
   /* border: 1px solid grey; */
   margin: 100px 10px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: whitesmoke;
   border-radius: 5px;
   box-shadow: 0 10px 10px 0 rgba(0, 0, 0, .26), 0 10px 10px 0 rgba(0, 0, 0, .22);
 }

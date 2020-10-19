@@ -4,7 +4,7 @@
 //   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 // });
 $("#titleHeader").css( "opacity", 0 );
-$("#titleHeader").fadeTo( "slow", 1 );
+$("#titleHeader").fadeTo( 2000, 1 );
 
 $(".data-button").click(function(){
   $("#textChoices").empty();
