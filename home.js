@@ -3,6 +3,7 @@
 //   var selText = $(this).text();
 //   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
 // });
+console.log("newest");
 $("#titleHeader").css( "opacity", 0 );
 $("#titleHeader").fadeTo( 2000, 1 );
 
