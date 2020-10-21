@@ -196,8 +196,8 @@ a:hover, a:active {
   font-size: 60px;
   font-weight: bold;
   text-align: center;
-  background-color: rgba(0, 0, 0, .46);
-  border-radius: 8px;
+  background-color: rgba(29, 39, 51, 0.85);
+  border-radius: 20px;
   display: inline-block;
   padding: 20px;
   /* position: fixed;
