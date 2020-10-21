@@ -184,7 +184,8 @@ a:hover, a:active {
   border-bottom: 2px solid grey;
   background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ), url('https://cdn.pixabay.com/photo/2018/02/04/09/03/migration-3129340_960_720.jpg');
   /* background-image: url("https://cdn.pixabay.com/photo/2018/02/04/09/03/migration-3129340_960_720.jpg"); */
-  background-attachment: fixed !important;
+  
+  /* background-attachment: fixed !important; */
   background-repeat: no-repeat;
   background-size: cover;
   color:white;
