@@ -331,6 +331,41 @@ $(document).on("click", ".popup", function () {
   expanded = true;
   fillModal($(this).attr("id"));
   $("#exampleModal").modal();
+  $("#tree-page-content").addClass("black");
+  $("#treeContainer").addClass("black");
+  $(".my-nav").removeClass("dark-nav bg-dark");
+  $(".my-nav").addClass("navbar-light");
+  $("#sticky-footer").css("background-color","#12113a");
 
+
+});
+
+//fade background back in when exiting modal
+$(document).on("click", ".modal button", function () {
+  $("#tree-page-content, #treeContainer").removeClass("black");
+  $(".my-nav").addClass("dark-nav bg-dark");
+  $(".my-nav").removeClass("navbar-light");
+  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
+});
+
+$(document).mouseup(function(e) 
+{
+    var container = $(".modal-content");
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+      $("#tree-page-content, #treeContainer").removeClass("black");
+      $(".my-nav").addClass("dark-nav bg-dark");
+  $(".my-nav").removeClass("navbar-light");
+  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
+    }
+});
+
+document.addEventListener('keyup', function(e) {
+  if (e.key == "Escape") {
+    $("#tree-page-content, #treeContainer").removeClass("black");
+    $(".my-nav").addClass("dark-nav bg-dark");
+  $(".my-nav").removeClass("navbar-light");
+  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
+  }
 });
 
