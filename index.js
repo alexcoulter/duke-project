@@ -35,7 +35,7 @@ var svg = d3
   .attr("height", height + margin.top + margin.bottom)
   .call(d3.zoom().on("zoom", function () {
     svg.attr("transform", d3.event.transform)
-}))
+  }))
   .append("g")
   .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -144,10 +144,10 @@ function update(source) {
         : d.data.yadjust === "down"
           ? "translateX(10px) translateY(-" + (textbox_h / 2 - 20) + "px)"
           : d.data.yadjust === "up"
-          ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
-          : d.data.type === "law"
-            ? "translateX(10px) translateY(-" + (textbox_h / 2 - 10) + "px)"
-            : "translateX(28px) translateY(-8px)"
+            ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
+            : d.data.type === "law"
+              ? "translateX(10px) translateY(-" + (textbox_h / 2 - 10) + "px)"
+              : "translateX(28px) translateY(-8px)"
     )
     .append("xhtml:div")
     .style("fill", "black")
@@ -330,42 +330,42 @@ function update(source) {
 $(document).on("click", ".popup", function () {
   expanded = true;
   fillModal($(this).attr("id"));
+  $(".modal").addClass("animate__zoomIn");
+  $(".modal").removeClass("animate__zoomOut");
   $("#exampleModal").modal();
   $("#tree-page-content").addClass("black");
   $("#treeContainer").addClass("black");
   $(".my-nav").removeClass("dark-nav bg-dark");
   $(".my-nav").addClass("navbar-light");
-  $("#sticky-footer").css("background-color","#12113a");
+  $("#sticky-footer").css("background-color", "#12113a");
 
 
 });
 
 //fade background back in when exiting modal
 $(document).on("click", ".modal button", function () {
+  exitModal();
+});
+
+$(document).mouseup(function (e) {
+  var container = $(".modal-content");
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    exitModal();
+  }
+});
+
+document.addEventListener('keyup', function (e) {
+  if (e.key == "Escape") {
+    exitModal();
+  }
+});
+
+function exitModal(){
+  $(".modal").removeClass("animate__zoomIn");
+  $(".modal").addClass("animate__zoomOut");
   $("#tree-page-content, #treeContainer").removeClass("black");
   $(".my-nav").addClass("dark-nav bg-dark");
   $(".my-nav").removeClass("navbar-light");
-  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
-});
-
-$(document).mouseup(function(e) 
-{
-    var container = $(".modal-content");
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-      $("#tree-page-content, #treeContainer").removeClass("black");
-      $(".my-nav").addClass("dark-nav bg-dark");
-  $(".my-nav").removeClass("navbar-light");
-  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
-    }
-});
-
-document.addEventListener('keyup', function(e) {
-  if (e.key == "Escape") {
-    $("#tree-page-content, #treeContainer").removeClass("black");
-    $(".my-nav").addClass("dark-nav bg-dark");
-  $(".my-nav").removeClass("navbar-light");
-  $("#sticky-footer").css("background-color","rgba(40, 40, 40, .95)");
-  }
-});
+  $("#sticky-footer").css("background-color", "rgba(40, 40, 40, .95)");
+}
 
