@@ -93,7 +93,7 @@ border: 1px solid grey;
 
 .animate__zoomOut {
   animation: zoomOut;
-  animation-duration: .9s; 
+  animation-duration: 1s; 
 }
 
 .modal-header {
@@ -501,9 +501,20 @@ padding: 15px;
   display: none;
 }
 
-.black {
-  filter: brightness(45%) !important;
+
+.fade-out {
+ transition: opacity 1s ease-in-out;
+   opacity: .15;
+   /* -webkit-filter: brightness(40%);
+   -moz-filter: brightness(40%);
+   filter: brightness(40%);
+   transition: all 2s ease; */
 }
+
+/* .fade-in {
+  transition: opacity .5s linear;
+    opacity: 1;
+ } */
 
 .light {
   color: blue !important;

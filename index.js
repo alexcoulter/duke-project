@@ -333,8 +333,9 @@ $(document).on("click", ".popup", function () {
   $(".modal").addClass("animate__zoomIn");
   $(".modal").removeClass("animate__zoomOut");
   $("#exampleModal").modal();
-  $("#tree-page-content").addClass("black");
-  $("#treeContainer").addClass("black");
+  // $("#tree-page-content, #treeContainer").removeClass("fade-in");
+  $("#tree-page-content").addClass("fade-out");
+  $("#treeContainer").addClass("fade-out");
   $(".my-nav").removeClass("dark-nav bg-dark");
   $(".my-nav").addClass("navbar-light");
   $("#sticky-footer").css("background-color", "#12113a");
@@ -363,7 +364,8 @@ document.addEventListener('keyup', function (e) {
 function exitModal(){
   $(".modal").removeClass("animate__zoomIn");
   $(".modal").addClass("animate__zoomOut");
-  $("#tree-page-content, #treeContainer").removeClass("black");
+  $("#tree-page-content, #treeContainer").removeClass("fade-out");
+  // $("#tree-page-content, #treeContainer").addClass("fade-in");
   $(".my-nav").addClass("dark-nav bg-dark");
   $(".my-nav").removeClass("navbar-light");
   $("#sticky-footer").css("background-color", "rgba(40, 40, 40, .95)");
