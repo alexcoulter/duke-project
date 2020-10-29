@@ -83,6 +83,7 @@ border: 1px solid grey;
 
 .modal {
   padding-top: 80px;
+  padding-bottom: 150px;
   top: 5%;
 }
 
@@ -549,6 +550,10 @@ padding: 15px;
   #topImgDiv h1 {
     font-size: 40px;
   }
+
+  .modal-dialog {
+    width: 100% !important;
+  }
 }
 
 @media (max-width: 669px) {
@@ -566,6 +571,14 @@ padding: 15px;
   .about-text {
     padding: 5% 5%;
   }
+}
+
+@media (max-width: 575px) {
+.modal-dialog {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 }
 /* @media (max-width: 550px) {
   .container, .container-fluid {
