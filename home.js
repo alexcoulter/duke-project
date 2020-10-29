@@ -1,16 +1,16 @@
-// $(".dropdown-menu p").on("click",function(){
-//   console.log("Value: ",$(this).attr("data-value"));
-//   var selText = $(this).text();
-//   $(this).parents('.btn-group').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-// });
-
+//Animates the header to fade in and expand/shrink
 $("#titleHeader").css("opacity", 0);
-// $("#titleHeader").fadeTo( 2000, 1 );
 $.when($("#titleHeader").fadeTo(1000, 1))
   .done(function () {
     $("#titleHeader").addClass("animate__pulse");
   });
 
+  //Hide Navbar Links on click
+  $('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
+
+//displays user choices list on button click
 $(".data-button").click(function () {
   $("#textChoices").empty();
   $("#textChoicesDiv").removeClass("hidden");
@@ -26,10 +26,8 @@ $("#textChoices").bind("click", function (e) {
   redirectUser(e.target.getAttribute("data-id"));
 });
 
+//Generates choices list based on which button was pressed
 function propogateChoices(id) {
-  // console.log(id);
-  // $("#textChoices").css( "opacity", 0 );
-
   switch (id) {
     case "1":
       var li = $("<li>").text("I am a migrant seeking a family-based visa").attr("data-id", 1).addClass("item i01");
@@ -39,7 +37,6 @@ function propogateChoices(id) {
       // $("#textChoices").fadeTo( "fast", 1 );
       $("#textChoices").append(li, li2, li3, li4);
       fadeInList();
-
       window.location.href = "#textChoices";
       break;
 
@@ -82,7 +79,7 @@ function propogateChoices(id) {
   }
 }
 
-
+//Sends user to proper wayfinder page depending on their list selection
 function redirectUser(id) {
   switch (id) {
     case "1":
@@ -107,6 +104,7 @@ function redirectUser(id) {
   }
 }
 
+//animation to fade in list items sequentially
 function fadeInList() {
   var eT = 0;
   $('.list-item').each(function () {
