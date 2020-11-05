@@ -19,7 +19,7 @@ var canvas = d3.select(container).append("svg")
   var tree = d3.layout.tree()
     .size([400, 400]);
 
-  d3.json("new.json", function(data) {
+  d3.json("JSONtrees/new.json", function(data) {
     var nodes = tree.nodes(data);
     var links = tree.links(nodes);
     var node = canvas.selectAll("node")

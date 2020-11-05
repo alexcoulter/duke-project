@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark dark-nav my-nav">
-      <a class="navbar-brand" href="#">Tree 4</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark my-nav dark-nav" id="myNav">
+      <a class="navbar-brand">Migrant Seeking A Family Based Visa</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +27,7 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="./">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="#">Features</a>
@@ -39,17 +43,19 @@
     </nav>
     <div id="tree-page-content">
     <div class="container-fluid" id="treeContainer">
-      <button type="button" class="btn btn-primary" id="homeBtn">Go Back</button>
     </div>
+    <div class = "btn-container">
+    <button type="button" class="btn btn-primary" id="homeBtn">Go Back</button>
   </div>
+</div>
   <div class="push"></div>
-  <footer id="sticky-footer">Footer <a class="top-arrow" href="#page-content"><i class="fa fa-angle-double-up"></i></a>
+  <footer id="sticky-footer">Footer <a class="top-arrow" href="#tree-page-content"><i class="fa fa-angle-double-up"></i></a>
   </footer>
 
 
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  <div class="modal fade animate__animated" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
       <div class="modal-content">
@@ -80,7 +86,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.5/lodash.js"></script>
-  <script src="./scripts/tree4.js"></script>
+  <script src="./scripts/migrantVisa.js"></script>
   <script src="./scripts/index.js"></script>
 </body>
 

@@ -41,7 +41,7 @@ function propogateChoices(id) {
       break;
 
     case "2":
-      var li = $("<li>").text("I am the family member of a migrant seeking a family-based visa").attr("data-id", 1).addClass("item i01");
+      var li = $("<li>").text("I am the family member of a migrant seeking a family-based visa").attr("data-id", 5).addClass("item i01");
       var li2 = $("<li>").text("I am a migrant crossing the border with members of my family").attr("data-id", 2).addClass("item i02");
       var li3 = $("<li>").text("I am a parent who has been detained and separated from my child").attr("data-id", 3).addClass("item i03");
       var li4 = $("<li>").text("I am a child who has been separated from my parent").attr("data-id", 4).addClass("item i04");
@@ -84,7 +84,7 @@ function redirectUser(id) {
   switch (id) {
     case "1":
       // localStorage.setItem("tree", "treeData2.json");
-      window.location.href = 'tree1.html';
+      window.location.href = 'migrantVisa.html';
       break;
     case "2":
       // localStorage.setItem("tree", "treeData3.json");
@@ -97,6 +97,10 @@ function redirectUser(id) {
     case "4":
       // localStorage.setItem("tree", "treeData4.json");
       window.location.href = 'tree4.html';
+      break;
+      case "5":
+      // localStorage.setItem("tree", "treeData2.json");
+      window.location.href = 'familyVisa.html';
       break;
     default:
       alert("something went wrong");
