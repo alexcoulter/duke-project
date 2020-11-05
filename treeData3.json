@@ -7,7 +7,7 @@
         "outcome": "neg",
         "children": [
           {
-            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained & Charged with <span class = 'popup-text popup' id='popupCivil'>Civil or Criminal Offense</span> </p></div>",
+            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained by <span class = 'popup-text popup' id='popupCivil'>USCIS</span> </p></div>",
             "children": [
               {
                 "name": "<div class = 'node-text'>If 14+ unless exception applies</div>",
@@ -38,9 +38,6 @@
                 ]
               }
             ]
-          },
-          {
-            "name": "<div class = 'node-text'>Detained, but not charged</div>"
           }
         ]
       },

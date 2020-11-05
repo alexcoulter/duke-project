@@ -41,10 +41,10 @@ function propogateChoices(id) {
       break;
 
     case "2":
-      var li = $("<li>").text("I have a family member who was arrested but not detained").attr("data-id", 1).addClass("item i01");
-      var li2 = $("<li>").text("I have a family member was arrested but set free").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I have a family member who was apprehended by the law but not arrested").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I have a family member who was not apprehended by the law").attr("data-id", 4).addClass("item i04");
+      var li = $("<li>").text("I am the family member of a migrant seeking a family-based visa").attr("data-id", 1).addClass("item i01");
+      var li2 = $("<li>").text("I am a migrant crossing the border with members of my family").attr("data-id", 2).addClass("item i02");
+      var li3 = $("<li>").text("I am a parent who has been detained and separated from my child").attr("data-id", 3).addClass("item i03");
+      var li4 = $("<li>").text("I am a child who has been separated from my parent").attr("data-id", 4).addClass("item i04");
       $("#textChoices").append(li, li2, li3, li4);
       fadeInList();
       // $("#textChoices").fadeTo( "fast", 1 );
@@ -52,10 +52,10 @@ function propogateChoices(id) {
       break;
 
     case "3":
-      var li = $("<li>").text("I have a child who was born in the United States").attr("data-id", 1).addClass("item i01");
-      var li2 = $("<li>").text("I have a child who was not born in the United States but has lived here for 5 years").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I have a child who was detained at the border").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I have a child who was taken into custody").attr("data-id", 4).addClass("item i04");
+      var li = $("<li>").text("I am a government official who has recovered unidentified human remains at the border").attr("data-id", 1).addClass("item i01");
+      var li2 = $("<li>").text("I am a government official ....").attr("data-id", 2).addClass("item i02");
+      var li3 = $("<li>").text("I am a government official ....").attr("data-id", 3).addClass("item i03");
+      var li4 = $("<li>").text("I am a government official ....").attr("data-id", 4).addClass("item i04");
       $("#textChoices").append(li, li2, li3, li4);
       // $("#textChoices").fadeTo( "fast", 1 );
       fadeInList();
