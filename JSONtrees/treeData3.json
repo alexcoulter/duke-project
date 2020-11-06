@@ -15,7 +15,7 @@
                 "children": [
                   {
                     "name": "<div class = 'node-text'><p>DNA test is mandatory as per <a class ='popup-text' href='https://www.govinfo.gov/content/pkg/STATUTE-119/pdf/STATUTE-119-Pg2960.pdf' target='_blank'> 2005 DNA Fingerprint Act | 28 C.F.R. 28.12</a></p></div>",
-                    "children": [{ "name": "<div class = 'node-text'>DNA is entered into FBI CODIS<button class = 'popup-btn popup' id='popup2'>+</button></div>" }]
+                    "children": [{ "name": "<div class = 'node-text'><p>DNA is entered into FBI CODIS</p><button class = 'popup-btn popup' id='popup2'>+</button></div>" }]
                   }
                 ]
               },
@@ -25,15 +25,15 @@
                 "children": [
                   {
                     "name": "<div class = 'node-text'>Alien lawfully in, or being processed for lawful admission</div>",
-                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   },
                   {
                     "name": "<div class = 'node-text'>Alien held at port of entry during consideration of admissibility and not subject to further detention or proceedings<div>",
-                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   },
                   {
                     "name": "<div class = 'node-text'>Aliens held in connection with  maritime interdiction</div>",
-                    "children": [{ "name": "<div class = 'node-text'>No DNA collected<button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   }
                 ]
               }

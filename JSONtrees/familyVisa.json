@@ -1,25 +1,26 @@
 [
   {
     "name": "<div class = 'node-text'><p>Family Member of a Migrant Seeking a Family Based Visa</p><br><p>(Immediate Relative, Fiancee (k1), k3)</p></div>",
+    "yadjust": "down",
     "children": [
       {
         "name": "<div class = 'node-text'>I am the <span class = 'popup-text popup' id='popup1'>Sponsor</span> for the FBV</div>",
         "outcome": "pos",
-        "children": [{ "name": "<div class = 'node-text'>DNA will be required & used for (at least) FBI background check<button class = 'popup-btn popup' id='popup3'>+</button></div>",
+        "children": [{ "name": "<div class = 'node-text'><p>DNA will be required & used for (at least) FBI background check</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
           "outcome": "neg" }]
       },
       {
-        "name": "<div class = 'node-text'>I am not the <span class = 'popup-text popup' id='popup1'>Sponsor</span> for the FBV?</div>",
+        "name": "<div class = 'node-text'>I am not the <span class = 'popup-text popup' id='popup1'>Sponsor</span> for the FBV</div>",
         "outcome": "neg",
         "children": [{
           "name": "<div class = 'node-text'>I previously applied for an<span class = 'popup-text popup' id='popup2'> Immigration Benefit</span></div>",
           "outcome": "pos",
-          "children": [{ "name": "<div class = 'node-text'>DNA may be required depending on interpretation of 'relevant' potential factors<button class = 'popup-btn popup' id='popup4'>+</button></div>" }]
+          "children": [{ "name": "<div class = 'node-text'><p>DNA may be required depending on interpretation of 'relevant' potential factors</p><button class = 'popup-btn popup' id='popup4'>+</button></div>" }]
         },
         {
           "name": "<div class = 'node-text'>I have not previously applied for an<span class = 'popup-text popup' id='popup2'> Immigration Benefit</span></div>",
           "outcome": "neg",
-          "children": [{ "name": "<div class = 'node-text'>Likely no DNA required<button class = 'popup-btn popup' id='popup5'>+</button></div>",
+          "children": [{ "name": "<div class = 'node-text'><p>Likely no DNA required</p><button class = 'popup-btn popup' id='popup5'>+</button></div>",
             "outcome": "pos" }]
         }]
         

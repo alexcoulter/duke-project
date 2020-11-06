@@ -1,5 +1,6 @@
 var tree = "JSONtrees/familyVisa.json";
-var levels = 6; 
+var levels = 6;
+treeHeight = 700;
 
 
 function fillModal(id) {

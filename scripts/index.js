@@ -22,7 +22,7 @@ var colorScale = d3.scaleOrdinal("schemeSet2");
 // Set the dimensions and margins of the diagram
 var margin = { top: 0, right: 90, bottom: 30, left: 90 },
   width = 2200 - margin.left - margin.right,
-  height = 700 - margin.top - margin.bottom;
+  height = treeHeight - margin.top - margin.bottom;
 
 var textbox_w = 270, //was 336
   textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
@@ -132,7 +132,7 @@ function update(source) {
     });
 
   // ****************** Symbol section ***************************
-  var customSqr = d3.symbol().type(d3.symbolWye).size(50);
+  // var customSqr = d3.symbol().type(d3.symbolWye).size(50);
   nodeEnter
     .append("foreignObject")
     .attr("class", "txt")
@@ -142,7 +142,7 @@ function update(source) {
       d.data.clauses === 3
         ? "translateX(10px) translateY(-" + (textbox_h / 2 - 26) + "px)"
         : d.data.yadjust === "down"
-          ? "translateX(10px) translateY(-" + (textbox_h / 2 - 20) + "px)"
+          ? "translateX(30px) translateY(-" + (textbox_h / 2 - 12) + "px)"
           : d.data.yadjust === "up"
             ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
             : d.data.type === "law"
@@ -168,21 +168,17 @@ function update(source) {
 
   nodeUpdate
     .select("rect.node")
+    .attr("class", "node-style")
     .attr("width", (d) => (d.data.type === "law" ? textbox_w : 26))
     .attr("height", (d) =>
-      d.data.clauses === 3
-        ? textbox_h + 70
-        : d.data.clauses === 2
-          ? textbox_h + 30
-          : d.data.type === "law"
-            ? textbox_h
-            : 24
+      25
+       
     )
     .style("transform", (d) =>
       d.data.clauses === 3
         ? "translateY(-" + (textbox_h / 2 - 16) + "px)"
-        : d.data.yadjust === "down"
-          ? "translateY(-" + (textbox_h / 2 - 12) + "px)"
+        // : d.data.yadjust === "down"
+        //   ? "translateY(-" + (textbox_h / 2 - 12) + "px)"
           : d.data.type === "law"
             ? "translateY(-" + textbox_h / 2 + "px)"
             : "translateY(0px)"
@@ -193,7 +189,7 @@ function update(source) {
       "fill",
       (d) =>
         d.data.name.match(/Law/) || d.data.name.match(/Regulation/)
-          ? "#EBECF0" //grey
+          ? "#abdcfa" //blue
           : d.data.name.match(/DNA test/)
             ? "#FFC312" //yellow∂
             : d.data.outcome === "pos"
@@ -329,7 +325,8 @@ function update(source) {
 // })
 $(document).on("click", ".popup", function () {
   expanded = true;
-  fillModal($(this).attr("id"));
+
+  fillModal($(this).attr("id"), $(this).attr("data-id"));
   $(".modal").addClass("animate__zoomIn");
   $(".modal").removeClass("animate__zoomOut");
   $("#exampleModal").modal();

@@ -1,0 +1,133 @@
+[
+  {
+  "name": "<div class = 'node-text'><p>Unidentified Human Remains found in:</p></div>",
+  "children":
+  [
+  {
+    
+    "name": "<div class = ' img-fit'><img src='https://cdn.pixabay.com/photo/2017/04/10/06/05/california-2217654_960_720.png' class = 'cali-img'></div>",
+    "yadjust": "down",
+    "children": [
+      {
+        "name": "<div class = 'node-text'>Coroner </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'>Must send<span class = 'popup-text popup' id='popup2'> DNA samples</span> to DOJ</div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text dotted'><p>Sample enters CODISmp</p></div>"
+              },
+              {
+                "name": "<div class = 'node-text good-box'><p>Cremation / Burial Permitted</p><button class = 'popup-btn popup' id='popup3'>+</button></div>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>Law Enforcement Agency </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text dashed'><p>Must Notify DOJ </p><button class = 'popup-btn popup' id='popup1'>+</button></div>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "<div class = ' img-fit'><img src='https://cdn.pixabay.com/photo/2012/04/28/17/49/arizona-43747__340.png' class = 'cali-img'><p class = 'over-img'>Arizona</p></div>",
+    "yadjust": "down",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> <i class='fas fa-arrow-right'></i></p> </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text dotted-red'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span><i class='fas fa-arrow-right'></i></p></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text bad-box'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "<div class = 'img-fit'><img src='https://www.wpclipart.com/geography/US_States/new_mexico.png' class = 'cali-img'><p class = 'over-img'>New Mexico</p></div>",
+    "yadjust": "down",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "<div class = ' img-fit'><img src='https://cdn.pixabay.com/photo/2012/04/28/18/00/map-43791__340.png' class = 'cali-img'></div>",
+    "yadjust": "down",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "<div class = 'img-fit'><img src='https://cdn.pixabay.com/photo/2016/04/17/22/45/globe-1335720__340.png' class = 'cali-img'><p class = 'over-img'>Outside the US</p></div>",
+    "yadjust": "down",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "outcome": "neg"
+          }
+        ]
+      }
+    ]
+  }
+]
+  }
+]

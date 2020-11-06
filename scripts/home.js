@@ -52,7 +52,7 @@ function propogateChoices(id) {
       break;
 
     case "3":
-      var li = $("<li>").text("I am a government official who has recovered unidentified human remains at the border").attr("data-id", 1).addClass("item i01");
+      var li = $("<li>").text("I am a government official who has recovered unidentified human remains at the border").attr("data-id", 9).addClass("item i01");
       var li2 = $("<li>").text("I am a government official ....").attr("data-id", 2).addClass("item i02");
       var li3 = $("<li>").text("I am a government official ....").attr("data-id", 3).addClass("item i03");
       var li4 = $("<li>").text("I am a government official ....").attr("data-id", 4).addClass("item i04");
@@ -101,6 +101,9 @@ function redirectUser(id) {
       case "5":
       // localStorage.setItem("tree", "treeData2.json");
       window.location.href = 'familyVisa.html';
+      break;
+      case "9":
+      window.location.href = 'recovered.html';
       break;
     default:
       alert("something went wrong");
