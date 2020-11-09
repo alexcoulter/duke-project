@@ -28,7 +28,7 @@
         "name": "<div class = 'node-text'>Law Enforcement Agency </div>",
         "children": [
           {
-            "name": "<div class = 'node-text dashed'><p>Must Notify DOJ </p><button class = 'popup-btn popup' id='popup1'>+</button></div>"
+            "name": "<div class = 'node-text dashed'><p>Must Notify DOJ (27521.1) </p><button class = 'popup-btn popup' id='popup1'>+</button></div>"
           }
         ]
       }
@@ -61,20 +61,16 @@
     "yadjust": "down",
     "children": [
       {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
+        "name": "<div class = 'node-text'>{Link between OMI and <span class = 'popup-text popup' id='popup1'>Administrative Center</span>}</div>",
         "children": [
           {
-            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
+            "name": "<div class = 'node-text'><p>OMI collects samples, as per regulations</p></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>DNA testing done at <span class = 'popup-text popup' id='popup1'>Administrative Center</span> or contract facility</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
             "outcome": "neg"
-          }
-        ]
-      },
-      {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
-        "children": [
-          {
-            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
-            "outcome": "neg"
+              }
+            ]
           }
         ]
       }
@@ -85,20 +81,28 @@
     "yadjust": "down",
     "children": [
       {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
+        "name": "<div class = 'node-text'><p>UHR found within 120 miles of border</p></div>",
         "children": [
           {
-            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
-            "outcome": "neg"
-          }
-        ]
-      },
-      {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
-        "children": [
-          {
-            "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>",
-            "outcome": "neg"
+            "name": "<div class = 'node-text'><p>Justice of the Peace shall conduct inquest</p></div>",
+            "children": [
+              {
+                "name":  "<div class = 'node-text'><p>DNA collected from UHR by ???</p></div>",
+                "children": [
+                  {
+                    "name":  "<div class = 'node-text'><p>DNA sent to University of North Texas Center for Human Identification</p></div>",
+                    "children" : [
+                      {
+                        "name":  "<div class = 'node-text'><p>DNA entered into NAMUS/CODIS</p></div>"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name":  "<div class = 'node-text'><p>No body removal or burial until...</p></div>"
+              }
+            ]
           }
         ]
       }
