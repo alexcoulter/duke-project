@@ -121,15 +121,15 @@ function update(source) {
 
   // ****************** Nodes section ***************************
   //add rect as node
-  nodeEnter
-    .append("rect")
-    .attr("class", "node")
-    .attr("width", 1e-6)
-    .attr("height", 1e-6)
-    .attr("padding", 8)
-    .style("fill", function (d) {
-      return d._children ? "lightsteelblue" : "#fff";
-    });
+  // nodeEnter
+  //   .append("rect")
+  //   .attr("class", "node")
+  //   .attr("width", 1e-6)
+  //   .attr("height", 1e-6)
+  //   .attr("padding", 8)
+  //   .style("fill", function (d) {
+  //     return d._children ? "lightsteelblue" : "#fff";
+  //   });
 
   // ****************** Symbol section ***************************
   // var customSqr = d3.symbol().type(d3.symbolWye).size(50);
@@ -147,7 +147,7 @@ function update(source) {
             ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
             : d.data.type === "law"
               ? "translateX(10px) translateY(-" + (textbox_h / 2 - 10) + "px)"
-              : "translateX(28px) translateY(-8px)"
+              : "translateX(-5px) translateY(-20px)"
     )
     .append("xhtml:div")
     .style("fill", "black")
@@ -163,7 +163,7 @@ function update(source) {
     .transition()
     .duration(duration)
     .attr("transform", function (d) {
-      return "translate(" + d.y / 0.99 + "," + d.x / 1.03 + ")";
+      return "translate(" + d.y / 1.0 + "," + d.x / 1.0 + ")";
     });
 
   nodeUpdate
@@ -174,15 +174,15 @@ function update(source) {
       25
        
     )
-    .style("transform", (d) =>
-      d.data.clauses === 3
-        ? "translateY(-" + (textbox_h / 2 - 16) + "px)"
-        // : d.data.yadjust === "down"
-        //   ? "translateY(-" + (textbox_h / 2 - 12) + "px)"
-          : d.data.type === "law"
-            ? "translateY(-" + textbox_h / 2 + "px)"
-            : "translateY(0px)"
-    )
+    // .style("transform", (d) =>
+    //   d.data.clauses === 3
+    //     ? "translateY(-" + (textbox_h / 2 - 16) + "px)"
+    //     // : d.data.yadjust === "down"
+    //     //   ? "translateY(-" + (textbox_h / 2 - 12) + "px)"
+    //       : d.data.type === "law"
+    //         ? "translateY(-" + textbox_h / 2 + "px)"
+    //         : "translateY(0px)"
+    // )
     .attr("rx", 12)
     .attr("ry", 12)
     .style(
