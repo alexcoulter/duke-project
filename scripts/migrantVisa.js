@@ -1,5 +1,5 @@
 var tree = "JSONtrees/migrantVisa.json";
-var levels = 6; 
+var levels = 3; 
 treeHeight = 700;
 option1 = "<p class = 'summary'>Migrant seeking a family based Visa<i class='fas fa-arrow-right summary-arrow'></i>immediate relative<i class='fas fa-arrow-right summary-arrow'></i>DNA will be required to prove genetic relationship</p>";
 option2 = "<p class = 'summary'>Migrant seeking a family based Visa<i class='fas fa-arrow-right summary-arrow'></i>Preference Immigrant<i class='fas fa-arrow-right summary-arrow'></i>DNA will be required to prove genetic relationship</p>";

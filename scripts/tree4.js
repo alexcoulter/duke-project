@@ -1,5 +1,5 @@
 var tree = "JSONtrees/treeData4.json";
-var levels = 7;
+var levels = 4;
 treeHeight = 700;
 
 function fillModal(id) {

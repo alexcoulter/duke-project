@@ -21,17 +21,18 @@ var colorScale = d3.scaleOrdinal("schemeSet2");
 
 // Set the dimensions and margins of the diagram
 var margin = { top: 0, right: 90, bottom: 30, left: 90 },
-  width = 2200 - margin.left - margin.right,
+textbox_w = 240, //was 336
+  textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
+  // width = 2200 - margin.left - margin.right,
+  width = (textbox_w + 10) * levels + margin.left + margin.right,
   height = treeHeight - margin.top - margin.bottom;
 
-var textbox_w = 270, //was 336
-  textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
 var container = document.getElementById("treeContainer");
 
 var svg = d3
   .select(container)
   .append("svg")
-  .attr("width", width + margin.right + margin.left)
+  .attr("width", width)
   .attr("height", height + margin.top + margin.bottom)
   .call(d3.zoom().on("zoom", function () {
     svg.attr("transform", d3.event.transform)
@@ -109,8 +110,8 @@ function update(source) {
       let widthDiff = width - window.innerWidth;
       // let levels = 6;
       console.log(levels);
-      let screenShift = widthDiff / levels;
-      // console.log(d.depth);
+      let screenShift = (widthDiff / levels) + 10;
+      console.log(d.depth);
       let depth = d.depth + 1;
       if (depth > 2) {
         scrollScreen(depth * screenShift);
@@ -137,12 +138,15 @@ function update(source) {
     .append("foreignObject")
     .attr("class", "txt")
     .attr("width", textbox_w - 10)
-    .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 100)) //adjust this to ensure all text shown
+    .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 120)) //adjust this to ensure all text shown
+    .style("visibility", function(d) {          
+      return d.id == "supernode" ? "hidden" : "visible";
+  })
     .style("transform", (d) =>
       d.data.clauses === 3
         ? "translateX(10px) translateY(-" + (textbox_h / 2 - 26) + "px)"
         : d.data.yadjust === "down"
-          ? "translateX(30px) translateY(-" + (textbox_h / 2 - 12) + "px)"
+          ? "translateX(0px) translateY(-" + (textbox_h / 2 - 12) + "px)"
           : d.data.yadjust === "up"
             ? "translateX(10px) translateY(" + (textbox_h / 2 - 20) + "px)"
             : d.data.type === "law"
@@ -236,6 +240,7 @@ function update(source) {
 
   // Update the links...
   var link = svg.selectAll("path.link").data(links, function (d) {
+    // d3.selectAll("g").remove();
     return d.id;
   });
 
@@ -293,6 +298,10 @@ function update(source) {
 
   // Toggle children on click.
   function click(d) {
+    // console.log(d);
+    // d.data.nid = "show";
+    // console.log(d.data.nid);
+    // d3.select("#hidden1").remove();
     if (expanded === true) {
       return expanded = false;
     }
@@ -316,7 +325,6 @@ function update(source) {
       behavior: 'smooth'
     });
   }
-
 }
 
 //Modal Click Event
@@ -367,4 +375,5 @@ function exitModal(){
   $(".my-nav").removeClass("navbar-light");
   $("#sticky-footer").css("background-color", "rgba(40, 40, 40, .95)");
 }
+
 

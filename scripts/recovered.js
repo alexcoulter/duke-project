@@ -1,5 +1,5 @@
 var tree = "JSONtrees/recovered.json";
-var levels = 6;
+var levels = 7;
 treeHeight = 700; 
 
 

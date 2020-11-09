@@ -1,5 +1,5 @@
 var tree = "JSONtrees/familyVisa.json";
-var levels = 6;
+var levels = 4;
 treeHeight = 700;
 
 
