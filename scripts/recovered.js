@@ -77,3 +77,14 @@ function fillModal(id) {
       break;
   }
 }
+
+
+$(".dropdown-item").on("click", function() {
+  stateSelect = $(this).attr("id");
+  levels = $(this).attr("data-levels");
+  width = (textbox_w + 10) * levels + margin.left + margin.right;
+  treemap = d3.tree().size([height, width]);
+  
+  $("#dropdownMenu").text($(this).text());
+  redraw(tree);
+})

@@ -276,6 +276,14 @@ label {
   stroke-dasharray: 1;
 }
 
+.hide-link {
+  fill: none;
+  /* stroke: #e0e0e0; */
+  stroke: rgb(182, 176, 176);
+  stroke-width:0px;
+  stroke-dasharray: 1;
+}
+
 
 div.tooltip {
   position: absolute;
@@ -625,6 +633,18 @@ padding: 15px;
   color: blue !important;
 }
 
+
+/* State Selection Box Styles */
+#dropdownMenu {
+  background-color: rgb(59,72,113);
+}
+.state-ddn {
+padding: 0 40px;
+}
+
+.state-select-header {
+  padding:40px 40px 10px 40px;
+}
 
 /* ***********Media Queries************ */
 @media (max-width: 1600px) {

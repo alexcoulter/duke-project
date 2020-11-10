@@ -44,6 +44,18 @@
     </nav>
     <div id="tree-page-content">
     <div class="container-fluid" id="treeContainer">
+      <h5 class = "state-select-header">Select Which state the remains were found in:</h5>
+      <div class="dropdown state-ddn">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">State
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu">
+          <button class="dropdown-item" id="California" data-levels = 4 type="button">California</button>
+          <button class="dropdown-item" id="Arizona" data-levels = 3 type="button">Arizona</button>
+          <button class="dropdown-item" id="NewMexico" data-levels= 4 type="button">New Mexico</button>
+          <button class="dropdown-item" id="Texas" data-levels = 6 type="button">Texas</button>
+          <button class="dropdown-item" id="Other" data-levels = 3 type="button">Outside the US</button>
+        </div>
+      </div>
     </div>
     <div class = "btn-container">
     <button type="button" class="btn btn-primary" id="homeBtn">Go Back</button>

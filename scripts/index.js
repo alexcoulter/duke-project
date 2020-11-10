@@ -3,6 +3,7 @@
 
 // var tree = localStorage.getItem("tree") || "";
 console.log(tree);
+var stateSelect = "";
 let translate = 0;
 let expanded = false;
 //show default view
@@ -58,7 +59,26 @@ function collapse(d) {
 
 function redraw(data) {
   d3.json(data, function (error, treeData0) {
-    treeData = treeData0[0];
+    if(stateSelect == "California") {
+      treeData = treeData0[0].children[0];
+    }
+    else if(stateSelect == "Arizona") {
+      console.log("ari");
+      treeData = treeData0[0].children[1];
+    }
+    else if(stateSelect == "NewMexico") {
+      treeData = treeData0[0].children[2];
+    }
+    else if(stateSelect == "Texas") {
+      treeData = treeData0[0].children[3];
+    }
+    else if(stateSelect == "Other") {
+      treeData = treeData0[0].children[4];
+    }
+    else {
+      treeData = treeData0[0];
+    }
+
     root = d3.hierarchy(treeData, function (d) {
       return d.children;
     });
@@ -75,7 +95,6 @@ function redraw(data) {
 function update(source) {
   // Assigns the x and y position for the nodes
   var treeData = treemap(root);
-
   // Compute the new tree layout.
   var nodes = treeData.descendants(),
     links = treeData.descendants().slice(1);
@@ -165,6 +184,7 @@ function update(source) {
   // Transition to the proper position for the node
   nodeUpdate
   .transition()
+  .delay(100)
   .duration(duration * .7)
     .attr("transform", function (d) {
       return "translate(" + d.y / 1.0 + "," + d.x / 1.0 + ")";
@@ -208,7 +228,7 @@ function update(source) {
   var nodeExit = node
     .exit()
     .transition()
-    .delay(200)
+    .delay(00)
     .duration(duration * .7)
     
     .attr("transform", function (d) {
@@ -230,10 +250,14 @@ function update(source) {
 
   // On exit reduce the node circles size to 0
 
-  nodeExit.select("txt").attr("width", 1e-6).attr("height", 1e-6);
+  // nodeExit.select("txt").attr("width", 1e-6).attr("height", 1e-6);
 
   // On exit reduce the opacity of text labels
-  nodeExit.select(".txt").style("fill-opacity", 0);
+  // nodeExit.select(".txt").style("fill-opacity", 0);
+  // nodeExit.select("foreignObject").attr("width", 1e-6).attr("height", 1e-6);
+
+  // On exit reduce the opacity of text labels
+  nodeExit.select("foreignObject").delay(100).style("opacity", .0);
 
   // ****************** links section ***************************
 
@@ -247,7 +271,13 @@ function update(source) {
   var linkEnter = link
     .enter()
     .insert("path", "g")
-    .attr("class", "link")
+    .attr("class", function(d) {
+      // console.log(d.data.nid);
+      return "link";
+    })
+
+
+
     .attr("d", function (d) {
       var o = { x: source.x0, y: source.y0 };
       return diagonal(o, o);
@@ -259,6 +289,7 @@ function update(source) {
   // Transition back to the parent element position
   linkUpdate
     .transition()
+    .delay(100)
     .duration(duration * .7)
     .attr("d", function (d) {
       return diagonal(d, d.parent);
@@ -268,7 +299,8 @@ function update(source) {
   var linkExit = link
     .exit()
     .transition()
-    .duration(duration)
+    .delay(100)
+    .duration(duration * .5)
     
     .attr("d", function (d) {
       var o = { x: source.x, y: source.y };
@@ -301,7 +333,6 @@ function update(source) {
     // d.data.nid = "show";
     // console.log(d.data.nid);
     // d3.select("#hidden1").remove();
-    console.log(d);
     if (expanded === true) {
       return expanded = false;
     }
