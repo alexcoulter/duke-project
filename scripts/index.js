@@ -79,7 +79,6 @@ function update(source) {
   // Compute the new tree layout.
   var nodes = treeData.descendants(),
     links = treeData.descendants().slice(1);
-
   // Normalize for fixed-depth for arcs - leave space for text.
   nodes.forEach(function (d) {
     d.y = d.depth * (textbox_w + 30);
@@ -109,13 +108,12 @@ function update(source) {
     .attr("transform", function (d) {
       let widthDiff = width - window.innerWidth;
       // let levels = 6;
-      console.log(levels);
       let screenShift = (widthDiff / levels) + 10;
-      console.log(d.depth);
       let depth = d.depth + 1;
       if (depth > 2) {
         scrollScreen(depth * screenShift);
       }
+      
       return "translate(" + source.y0 + "," + source.x0 + ")";
     })
     .on("click", delayClick);
@@ -137,11 +135,9 @@ function update(source) {
   nodeEnter
     .append("foreignObject")
     .attr("class", "txt")
+    
     .attr("width", textbox_w - 10)
     .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 120)) //adjust this to ensure all text shown
-    .style("visibility", function(d) {          
-      return d.id == "supernode" ? "hidden" : "visible";
-  })
     .style("transform", (d) =>
       d.data.clauses === 3
         ? "translateX(10px) translateY(-" + (textbox_h / 2 - 26) + "px)"
@@ -156,16 +152,20 @@ function update(source) {
     .append("xhtml:div")
     .style("fill", "black")
     .html(function (d) {
+      // if(d.data.nid == "wham")
       return d.data.name;
-    });
+    })
+    .style("opacity", 0)
+    .transition().duration(800)
+    .style("opacity", 1);
 
   // UPDATE
   var nodeUpdate = nodeEnter.merge(node);
 
   // Transition to the proper position for the node
   nodeUpdate
-    .transition()
-    .duration(duration)
+  .transition()
+  .duration(duration * .7)
     .attr("transform", function (d) {
       return "translate(" + d.y / 1.0 + "," + d.x / 1.0 + ")";
     });
@@ -174,10 +174,7 @@ function update(source) {
     .select("rect.node")
     .attr("class", "node-style")
     .attr("width", (d) => (d.data.type === "law" ? textbox_w : 26))
-    .attr("height", (d) =>
-      25
-       
-    )
+    .attr("height", (d) => 25)
     // .style("transform", (d) =>
     //   d.data.clauses === 3
     //     ? "translateY(-" + (textbox_h / 2 - 16) + "px)"
@@ -211,7 +208,9 @@ function update(source) {
   var nodeExit = node
     .exit()
     .transition()
+    .delay(200)
     .duration(duration * .7)
+    
     .attr("transform", function (d) {
       //Scrolls screen to left 200px
       // scrollScreen(d.depth * 300 - 600);
@@ -231,10 +230,10 @@ function update(source) {
 
   // On exit reduce the node circles size to 0
 
-  nodeExit.select("rectangle").attr("width", 1e-6).attr("height", 1e-6);
+  nodeExit.select("txt").attr("width", 1e-6).attr("height", 1e-6);
 
   // On exit reduce the opacity of text labels
-  nodeExit.select("text").style("fill-opacity", 1e-6);
+  nodeExit.select(".txt").style("fill-opacity", 0);
 
   // ****************** links section ***************************
 
@@ -260,7 +259,7 @@ function update(source) {
   // Transition back to the parent element position
   linkUpdate
     .transition()
-    .duration(duration)
+    .duration(duration * .7)
     .attr("d", function (d) {
       return diagonal(d, d.parent);
     });
@@ -270,6 +269,7 @@ function update(source) {
     .exit()
     .transition()
     .duration(duration)
+    
     .attr("d", function (d) {
       var o = { x: source.x, y: source.y };
       return diagonal(o, o);
@@ -298,10 +298,10 @@ function update(source) {
 
   // Toggle children on click.
   function click(d) {
-    // console.log(d);
     // d.data.nid = "show";
     // console.log(d.data.nid);
     // d3.select("#hidden1").remove();
+    console.log(d);
     if (expanded === true) {
       return expanded = false;
     }

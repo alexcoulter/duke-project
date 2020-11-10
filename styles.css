@@ -616,10 +616,10 @@ padding: 15px;
    transition: all 2s ease; */
 }
 
-/* .fade-in {
+.fade-in {
   transition: opacity .5s linear;
     opacity: 1;
- } */
+ }
 
 .light {
   color: blue !important;
