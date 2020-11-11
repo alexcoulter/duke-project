@@ -434,6 +434,7 @@ a:hover, a:active {
   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, .12), 10px 10px 10px 10px rgba(0, 0, 0, .12);
   margin-bottom:80px;
   border-radius:10px;
+  background: rgb(255,255,255);
 }
 
 .dropdown-buttons h1 {

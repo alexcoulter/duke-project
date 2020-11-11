@@ -78,7 +78,7 @@ function fillModal(id) {
   }
 }
 
-
+//Let the user choose a state and render the appropriate tree
 $(".dropdown-item").on("click", function() {
   stateSelect = $(this).attr("id");
   levels = $(this).attr("data-levels");
@@ -87,4 +87,9 @@ $(".dropdown-item").on("click", function() {
   
   $("#dropdownMenu").text($(this).text());
   redraw(tree);
-})
+});
+
+//Change from right arrow to left arrow on click
+$(document).on("click", ".txt", function() {
+    $(this).find("i").toggleClass("hidden").fadeOut(1).fadeIn(500);
+});

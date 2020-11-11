@@ -40,7 +40,7 @@
     "yadjust": "down",
     "children": [
       {
-        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> <i class='fas fa-arrow-right'></i></p> </div>",
+        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></p> </div>",
         "children": [
           {
             "name": "<div class = 'node-text dotted-red'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>"
@@ -48,7 +48,7 @@
         ]
       },
       {
-        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span><i class='fas fa-arrow-right'></i></p></div>",
+        "name": "<div class = 'node-text'><p><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></p></div>",
         "children": [
           {
             "name": "<div class = 'node-text bad-box'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3'>+</button></div>"

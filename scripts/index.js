@@ -330,6 +330,7 @@ function update(source) {
 
   // Toggle children on click.
   function click(d) {
+    console.log(d);
     // d.data.nid = "show";
     // console.log(d.data.nid);
     // d3.select("#hidden1").remove();
@@ -376,7 +377,11 @@ $(document).on("click", ".popup", function () {
   $(".my-nav").addClass("navbar-light");
   $("#sticky-footer").css("background-color", "#12113a");
 
+});
 
+//Prevent next node from expanding on link click
+$(document).on("click", ".node-text a", function () {
+  expanded = true;
 });
 
 //fade background back in when exiting modal
@@ -406,5 +411,4 @@ function exitModal(){
   $(".my-nav").removeClass("navbar-light");
   $("#sticky-footer").css("background-color", "rgba(40, 40, 40, .95)");
 }
-
 
