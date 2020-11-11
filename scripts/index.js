@@ -1,21 +1,12 @@
 //based on https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd by d3noob
 
 
-// var tree = localStorage.getItem("tree") || "";
-console.log(tree);
+// console.log(tree);
 var stateSelect = "";
 let translate = 0;
 let expanded = false;
 //show default view
 if (tree) { redraw(tree) }
-
-
-//******Click Button Events*********
-//Redirect to home page on back button click
-$("#homeBtn").on("click", function () {
-  window.location.href = "index.html";
-});
-
 
 // ****************** Color ***************************
 var colorScale = d3.scaleOrdinal("schemeSet2");
@@ -63,7 +54,6 @@ function redraw(data) {
       treeData = treeData0[0].children[0];
     }
     else if(stateSelect == "Arizona") {
-      console.log("ari");
       treeData = treeData0[0].children[1];
     }
     else if(stateSelect == "NewMexico") {
@@ -272,7 +262,15 @@ function update(source) {
     .enter()
     .insert("path", "g")
     .attr("class", function(d) {
-      // console.log(d.data.nid);
+      if(d.data.linkId == "green"){
+        return "link green-link"
+      }
+      else if(d.data.linkId == "red"){
+        return "link red-link"
+      }
+      else if(d.data.linkId == "solid"){
+        return "link solid-link"
+      }
       return "link";
     })
 
@@ -359,13 +357,16 @@ function update(source) {
   }
 }
 
-//Modal Click Event
-// $(".popup").on("click", function() {
-//   exp3 = true;
-// })
+
+//******   Event Listeners   *********
+//Redirect to home page on back button click
+$("#homeBtn").on("click", function () {
+  window.location.href = "index.html";
+});
+
+//Expands Modal window on link click
 $(document).on("click", ".popup", function () {
   expanded = true;
-
   fillModal($(this).attr("id"), $(this).attr("data-id"));
   $(".modal").addClass("animate__zoomIn");
   $(".modal").removeClass("animate__zoomOut");
@@ -376,7 +377,6 @@ $(document).on("click", ".popup", function () {
   $(".my-nav").removeClass("dark-nav bg-dark");
   $(".my-nav").addClass("navbar-light");
   $("#sticky-footer").css("background-color", "#12113a");
-
 });
 
 //Prevent next node from expanding on link click
@@ -389,6 +389,7 @@ $(document).on("click", ".modal button", function () {
   exitModal();
 });
 
+//Exit Modal window if user clicks outside of it
 $(document).mouseup(function (e) {
   var container = $(".modal-content");
   if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -396,12 +397,14 @@ $(document).mouseup(function (e) {
   }
 });
 
+//Exit Modal window if user presses 'Escape' key
 document.addEventListener('keyup', function (e) {
   if (e.key == "Escape") {
     exitModal();
   }
 });
 
+//Function to animate the Modal closing and fade the background back in
 function exitModal(){
   $(".modal").removeClass("animate__zoomIn");
   $(".modal").addClass("animate__zoomOut");

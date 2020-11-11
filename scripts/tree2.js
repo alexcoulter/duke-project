@@ -1,4 +1,4 @@
-var tree = "JSONtrees/treeData3.json";
+var tree = "JSONtrees/tree2.json";
 var levels = 6; 
 treeHeight = 700;
 

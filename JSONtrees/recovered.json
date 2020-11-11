@@ -7,7 +7,6 @@
     
     "name": "<div class = ' img-fit' id='hidden1'><img src='https://cdn.pixabay.com/photo/2017/04/10/06/05/california-2217654_960_720.png' class = 'cali-img'></div>",
     "yadjust": "down",
-    "nid": "wham",
     "children": [
       {
         "name": "<div class = 'node-text'>Coroner </div>",

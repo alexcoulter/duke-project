@@ -5,6 +5,7 @@
       {
         "name": "<div class = 'node-text'>Apprehended By <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
         "outcome": "neg",
+        "linkId": "red",
         "children": [
           {
             "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained by <span class = 'popup-text popup' id='popupCivil'>USCIS</span> </p></div>",
@@ -25,14 +26,17 @@
                 "children": [
                   {
                     "name": "<div class = 'node-text'>Alien lawfully in, or being processed for lawful admission</div>",
+                    "linkId": "solid",
                     "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   },
                   {
                     "name": "<div class = 'node-text'>Alien held at port of entry during consideration of admissibility and not subject to further detention or proceedings<div>",
+                    "linkId": "solid",
                     "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   },
                   {
                     "name": "<div class = 'node-text'>Aliens held in connection with  maritime interdiction</div>",
+                    "linkId": "solid",
                     "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
                   }
                 ]
@@ -43,7 +47,8 @@
       },
       {
         "name": "<div class = 'node-text'>Not Apprehended by <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
-        "outcome": "pos"
+        "outcome": "pos",
+        "linkId": "green"
       }
     ]
   }
