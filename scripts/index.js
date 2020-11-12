@@ -262,6 +262,8 @@ function update(source) {
     .enter()
     .insert("path", "g")
     .attr("class", function(d) {
+      buildRecap(d);
+
       if(d.data.linkId == "green"){
         return "link green-link"
       }
@@ -328,7 +330,7 @@ function update(source) {
 
   // Toggle children on click.
   function click(d) {
-    console.log(d);
+   
     // d.data.nid = "show";
     // console.log(d.data.nid);
     // d3.select("#hidden1").remove();
@@ -367,7 +369,7 @@ $("#homeBtn").on("click", function () {
 //Expands Modal window on link click
 $(document).on("click", ".popup", function () {
   expanded = true;
-  fillModal($(this).attr("id"), $(this).attr("data-id"));
+  fillModal($(this).attr("id"));
   $(".modal").addClass("animate__zoomIn");
   $(".modal").removeClass("animate__zoomOut");
   $("#exampleModal").modal();
@@ -413,5 +415,23 @@ function exitModal(){
   $(".my-nav").addClass("dark-nav bg-dark");
   $(".my-nav").removeClass("navbar-light");
   $("#sticky-footer").css("background-color", "rgba(40, 40, 40, .95)");
+}
+
+//goes through the box that was opened and saves all it's children's text to an array for recap
+function buildRecap(d) {
+  recapArray = [];
+  var newParent = d;
+  recapArray.unshift(d.data.text);
+  while(newParent.parent) {
+  recapArray.unshift(newParent.parent.data.text);
+  newParent = newParent.parent;
+  }
+  // console.log(recapArray);
+  recap = "<p class = 'summary'>";
+  for(let i=0; i<recapArray.length -1; i++) {
+    recap += recapArray[i] + "<i class='fas fa-arrow-right summary-arrow'></i>";
+  }
+  recap += recapArray[recapArray.length - 1] + "</p>";
+  // console.log(recap);
 }
 

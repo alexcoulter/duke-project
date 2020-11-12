@@ -1,18 +1,82 @@
 [
   {
     "name": "<div class = 'node-text'><p>Migrant Seeking a Family Based Visa</p></div>",
+    "text": "Migrant Seeking a Family Based Visa",
     "children": [
       {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup1'>Immediate Relative</span> </div>",
-        "children": [{ "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3' data-id='option1'>+</button></div>",
-          "outcome": "neg" }]
-      },
-      {
-        "name": "<div class = 'node-text'><span class = 'popup-text popup' id='popup2'>Preference Immigrant</span></div>",
-       
-        "children": [{ "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p><button class = 'popup-btn popup' id='popup3' data-id='option2'>+</button></div>",
-          "outcome": "neg" }]
-        }
+        "name": "<div class = 'node-text'><p>DNA will be required to prove genetic relationship</p></div>",
+        "text": "DNA will be required to prove genetic relationship",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>Currently residing in the U.S.</p></div>",
+            "text": "Currently residing in the U.S.",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>Applicant contacts AABB accredited lab to begin testing</p></div>",
+                "text": "Applicant contacts AABB accredited lab to begin testing",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text'><p>AABB lab instructs applicant where to go for collection</p></div>",
+                    "text": "AABB lab instructs applicant where to go for collection",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text'><p>Clinic responsible for collection sends sample (plus some) to AABB accredited lab</p></div>",
+                        "text": "Clinic responsible for collection sends sample (plus some) to AABB accredited lab",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text'><p>Lab forwards results to DOS</p></div>",
+                            "text": "Lab forwards results to DOS",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text good-box'><p>99.5% = satisfactory</p><button class = 'popup-btn popup' id='popupSatis' data-id='option1'>+</button></div>",
+                                "text": "99.5% = satisfactory"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "<div class = 'node-text'><p>Currently residing abroad</p></div>",
+            "text": "Currently residing abroad",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>Request test kit from<span class = 'popup-text popup' id='popupLab'> AABB accredited lab</span> to be sent to embassy</p></div>",
+                "text": "Request test kit from AABB accredited lab to be sent to embassy",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text'><p>Collection must be done at a U.S. consulate or embassy, under the supervision of a <span class = 'popup-text popup' id='popupWitness'> Cleared American witness</span></p></div>",
+                    "text": "Collection must be done at a U.S. consulate or embassy, under the supervision of a Cleared American witness",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text'><p>Sample sent back to AABB lab and tested</p></div>",
+                        "text": "Sample sent back to AABB lab and tested",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text'><p>Results sent back to cleared American witness and entered into ECAS</p></div>",
+                            "text": "Results sent back to cleared American witness and entered into ECAS",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text good-box'><p>99.5% = satisfactory</p><button class = 'popup-btn popup' id='popupSatis' data-id='option2'>+</button></div>",
+                                "text": "99.5% = satisfactory"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     ]
   }
 ]
