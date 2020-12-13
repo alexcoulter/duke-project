@@ -88,11 +88,3 @@ $(".dropdown-item").on("click", function() {
   $("#dropdownMenu").text($(this).text());
   redraw(tree);
 });
-
-//Change from right arrow to left arrow on click
-$(document).on("click", ".txt", function(e) {
-  console.log($(e.target).attr('class'));
-if(expanded == false) {
-    $(this).find("i").toggleClass("hidden").fadeOut(1).fadeIn(700);
-}
-});

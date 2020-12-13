@@ -16,7 +16,7 @@ var margin = { top: 0, right: 90, bottom: 30, left: 90 },
 textbox_w = 240, //was 336
   textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
   // width = 2200 - margin.left - margin.right,
-  width = (textbox_w + 10) * levels + margin.left + margin.right,
+  width = (textbox_w + 20) * levels + margin.left + margin.right,
   height = treeHeight - margin.top - margin.bottom;
 
 var container = document.getElementById("treeContainer");
@@ -364,6 +364,14 @@ function update(source) {
 //Redirect to home page on back button click
 $("#homeBtn").on("click", function () {
   window.location.href = "index.html";
+});
+
+//Change from right arrow to left arrow on click
+$(document).on("click", ".txt", function(e) {
+  console.log($(e.target).attr('class'));
+if(expanded == false) {
+    $(this).find("i").toggleClass("hidden").fadeOut(1).fadeIn(700);
+}
 });
 
 //Expands Modal window on link click
