@@ -135,6 +135,18 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .32), 0 10px 10px 0 rgba(0, 0, 0, .32)
   max-height: 80%;
 }
 
+.red-box {
+  background-color: rgb(219, 144, 144);
+}
+.green-box {
+  background-color: rgb(144, 204, 144);
+}
+.grey-box {
+  background-color: rgb(182, 176, 176);
+}
+.yellow-box {
+  background-color: rgb(243, 220, 146);
+}
 .bad-box {
   background-color: rgb(235, 170, 170);
   border-radius: 100px;
@@ -167,11 +179,14 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .32), 0 10px 10px 0 rgba(0, 0, 0, .32)
   top: 5%;
 }
 .summary {
-  color: green;
+  padding:1.5%;
+  border: 2px solid grey;
+  border-radius: 10px;
 }
 
 .summary-arrow {
   margin: 0 10px;
+  color: rgb(34, 117, 31);
 }
 
 .animate__zoomIn {

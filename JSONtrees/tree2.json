@@ -1,43 +1,67 @@
 [
   {
-    "name": "<div class = 'node-text'>Migrant</div>",
+    "name": "<div class = 'node-text grey-box'>Detained by CPB/ICE</div>",
     "children": [
       {
-        "name": "<div class = 'node-text'>Apprehended By <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
-        "outcome": "neg",
-        "linkId": "red",
+        "name": "<div class = 'node-text'>I already provided DNA for storage in CODIS </div>",
         "children": [
           {
-            "name": "<div class = 'node-text' id='detainedBig'><p  class='h6'> Detained by <span class = 'popup-text popup' id='popupCivil'>USCIS</span> </p></div>",
+            "name": "<div class = 'node-text red-box'>No collection</div>",
+            "outcome": "neg"
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>I have not provided DNA for storage in CODIS</div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'>I am subject to one or more <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></div>",
             "children": [
               {
-                "name": "<div class = 'node-text'>If 14+ unless exception applies</div>",
-                "outcome": "neg",
-                "children": [
-                  {
-                    "name": "<div class = 'node-text'><p>DNA test is mandatory as per <a class ='popup-text' href='https://www.govinfo.gov/content/pkg/STATUTE-119/pdf/STATUTE-119-Pg2960.pdf' target='_blank'> 2005 DNA Fingerprint Act | 28 C.F.R. 28.12</a></p></div>",
-                    "children": [{ "name": "<div class = 'node-text'><p>DNA is entered into FBI CODIS</p><button class = 'popup-btn popup' id='popup2'>+</button></div>" }]
-                  }
-                ]
-              },
+                "name": "<div class = 'node-text red-box'><p>No collection</p></div>",
+                "outcome": "neg"
+              }
+            ]
+          },
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>I am not subject to any <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></p></div>",
+            "children": [
               {
-                "name": "<div class = 'node-text'>Exceptions</div>",
-                "outcome": "pos",
+                "name": "<div class = 'node-text grey-box'>DNA sample will be collected by CPB, refusal to submit to collection is a 'misdemeanor'</div>",
                 "children": [
                   {
-                    "name": "<div class = 'node-text'>Alien lawfully in, or being processed for lawful admission</div>",
-                    "linkId": "solid",
-                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
-                  },
-                  {
-                    "name": "<div class = 'node-text'>Alien held at port of entry during consideration of admissibility and not subject to further detention or proceedings<div>",
-                    "linkId": "solid",
-                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
-                  },
-                  {
-                    "name": "<div class = 'node-text'>Aliens held in connection with  maritime interdiction</div>",
-                    "linkId": "solid",
-                    "children": [{ "name": "<div class = 'node-text'><p>No DNA collected</p><button class = 'popup-btn popup' id='popup3'>+</button></div>" }]
+                    "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p></div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text green-box'><p>DNA stored in NDIS</p><button class = 'popup-btn popup' id='popupNDIS'>+</button></div>"
+                          }
+                        ]
+                      },
+                      {
+                        "name": "<div class = 'node-text'><p>If sample is unusable, CBP may attemp to retake sample, if individual remains in custody</p></div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text grey-box'><p>If individual is no longer in CBP or ICE custody, no retaking of sample</p></div>"
+                          },
+                          {
+                            "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p></div>",
+                                "children": [
+                                  {
+                                    "name": "<div class = 'node-text green-box'><p>DNA stored in NDIS</p><button class = 'popup-btn popup' id='popupNDIS'>+</button></div>"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
                   }
                 ]
               }
@@ -46,9 +70,14 @@
         ]
       },
       {
-        "name": "<div class = 'node-text'>Not Apprehended by <span class = 'popup-text popup' id='popup1'>Federal Agency</span></div>",
+        "name": "<div class = 'node-text'>I am not sure if I have already provided DNA for storage in CODIS </div>",
         "outcome": "pos",
-        "linkId": "green"
+        "children": [
+          {
+            "name": "<div class = 'node-text yellow-box'>CBP will determine this based on <span class = 'popup-text popup' id='popupFIHS'>FBI Identity History Summary</span> </div>",
+            "outcome": "neut"
+          }
+        ]
       }
     ]
   }

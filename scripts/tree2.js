@@ -1,61 +1,58 @@
 var tree = "JSONtrees/tree2.json";
-var levels = 6; 
+var levels = 9; 
 treeHeight = 700;
 
 function fillModal(id) {
   switch(id) {
-    case "popup1":
-     $("#modalTitle").text("Federal Agency");
-     $("#modalBody").html(`<p>   1914 translation by H. Rackham
-     "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure
-     <br><br>
-     Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-     "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    case "popupFIHS":
+     $("#modalTitle").text("FBI Identity History Summary");
+     $("#modalBody").html(`<p> An FBI Identity History Summary is a “listing of certain information taken from fingerprint submissions kept by the FBI.” It includes information related to arrests and sometimes immigration status. For more information on FBI Identity History Summaries including how to request one and how to challenge one, please go to <a href='https://www.fbi.gov/services/cjis/identity-history-summary-checks' target="_blank">https://www.fbi.gov/services/cjis/identity-history-summary-checks</a>.</p>
      `);
       break;
-    case "popup2":
-      $("#modalTitle").text("DNA is entered into FBI CODIS");
-     $("#modalBody").html(`<p>Once DNA is collected by USCIS, the data is entered into the FBI’s CODIS system (the
-      Combined DNA Index System), which is traditionally used as a tool for linking violent crimes.
-      CODIS is intended to enable federal, state and local forensic laboratories to exchange and
-      compare DNA profiles electronically, linking serial violent crimes to each other and to known
-      offenders. The database is also used to help identify missing and unidentified individuals. Given
-      the nature of the CODIS system, the entry of migrant DNA into the system may be problematic.
-      
-      Essentially, non-violent criminals are being surveilled along side violent criminals, simply due to
-      their status as a migrant.</p><br>
-      <p>Migrants who are concerned about the implications of having their DNA inputted into the
-      CODIS system can utilize the resources listed below if they have questions or concerns regarding
-      this use of their personal biometric data.</p><br>
-      <ol>
-      <li><a href="./index.html" target = "_blank">The Colibrí Center</a> - facilitates family reunification and the identification of unidentified
-      human remains</li>
-      <li><a href="./index.html" target = "_blank">Justice for Our Neighbors</a> - a non-profit that seeks to aid asylum seekers in their legal
-      disputes with the USCIS</li>
-      <li><a href="./index.html" target = "_blank">USCIS Hotline</a> - a resource made available by the United States Citizenship and
-      Immigration Service to assist migrants with this process</li>
+    case "popupExemptions":
+      $("#modalTitle").text("Exemptions");
+     $("#modalBody").html(`<p>The following detainee populations are exempt from DNA collection when detained by Customs and Border Patrol:</p>
+      <ul>
+      <li>Individuals lawfully in or being processed for lawful admission into the United States;</li>
+      <li>Individuals held at a point of entry during consideration of admissibility, but not subject to further detention or proceedings;</li>
+      <li>Individuals who withdraw their application for admission who are not subject to further law enforcement action;</li>
+      <li>Individuals who are Visa Waiver Program refusals who are not subject to further enforcement action; </li>
+      <li>Individuals held in connection with maritime interdiction, and applicants for admission denied landing rights at berth;</li>
+      <li>Any individual transferred from CBP custody to the custody of another federal agency (with the exception of ICE);</li>
+      <li>Individuals who suffer from a severe physical or cognitive handicap including
+        <ul>
+        <li>Mental impairment; </li>
+        <li>Subjects being immediately transported for medical treatment; or</li>
+        <li>Subjects appearing to be under the influence of narcotics in a manner that poses a risk to officer safety.</li>
+        </ul>
+      </li>
+    </ul>
      `);
       break;
-    case "popup3":
-      $("#modalTitle").text("No DNA Collected");
-      $("#modalBody").html(`<p>   1914 translation by H. Rackham
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure
-      <br><br>
-      Section 1.10.33 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+    case "popupProfile":
+      $("#modalTitle").text("DNA Profile");
+      $("#modalBody").html(`<p>  DNA Profile .................................................................................................................................................................................................................</p>
       `);
       break;
-    case "popupCivil":
-      $("#modalTitle").text("Applicable Civil or Criminal Offenses include:");
-      $("#modalBody").html(`<p><a href="https://www.law.cornell.edu/uscode/text/8/1325" target="_blank">§1325</a> | Improper Entry, civil offense &amp; misdemeanor</p>
-      <p><a href="https://www.law.cornell.edu/uscode/text/8/1326" target="_blank">§1326</a> | Reentry of removed aliens; aggravated felony</p>
-      <p><a href="https://www.law.cornell.edu/uscode/text/8/1357" target="_blank">§1357</a> | Immigration Powers: Immigration authorities have broad power to search persons and
-      property</p>
-      <p><a href="https://www.law.cornell.edu/uscode/text/8/1182" target="_blank">§1182</a> | Conditions for inadmissibility</p>
-      <p><a href="https://www.law.cornell.edu/uscode/text/8/1225" target="_blank">§1225</a> | Inspection by immigration officers; expedited removal of inadmissible arriving aliens;
-      referral for hearing</p>
-      <p><a href="https://www.law.cornell.edu/uscode/text/8/1227" target="_blank">§1227</a> | Classes of deportable aliens</p>
-       <a href="https://www.law.cornell.edu/uscode/text/8/1229" target="_blank">8 USC §1229</a> | Initiation of removal proceedings</p>`);
+    case "popupNDIS":
+      $("#modalTitle").text("DNA stored in NDIS");
+      $("#modalBody").html(`<p>Migrant DNA collected by CBP and processed through an FBI Laboratory will be stored in the National DNA Index System (“NDIS”), a national inventory of DNA profiles contributed by federal, state, and local forensic laboratories. The NDIS contains the data of convicted offenders, arrestees, detainees, missing persons, relatives of missing persons and more, as submitted by accredited labs around the United States. It is part of the Combined DNA Index System (“CODIS”), a tool utilized by law enforcement agencies to link individuals to crimes based on DNA evidence, identify unidentified human remains and search for missing persons. </p><br>
+      <h6><b>What information is stored in CODIS?</b></h6>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the immigration context, CODIS stores only the following information:</p>
+      <ol>
+      <li>The DNA profile; </li>
+      <li>The Agency Identifier (for the agency that submitted the DNA profile);</li>
+      <li>The Specimen Identification Number (does not correlate to other personal information like social security numbers or A-Numbers);</li>
+      <li>The DNA laboratory personnel associated with the DNA profile analysis.</li>
+      </ol><br>
+      <h6><b>Who has access to the information stored in CODIS?</b></h6>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Federal, state and local law enforcement agencies have access to CODIS. CODIS may also be accessed in judicial proceedings, such as _______. Defendants in criminal cases may access the samples and analyses performed in connection with their case, but they may not access other data contained in CODIS.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Additionally, CODIS data may be accessed by criminal justice agencies for a population statistics database, for identification research and protocol development purposes, or for quality control.</p><br>
+      <h6><b>How secure is CODIS?</b></h6>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;The computer terminals containing the CODIS are located in a physically secure location and access is restricted to only authorized individuals. </p><br>
+      <h6><b>Can I get my information removed from CODIS?</b></h6>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good question! I’m working on an answer… There’s some indication that you can get an expungement, but it is unclear if this applies to immigrant detainees.</p>
+      `);
       break;
     default:
       alert("something went wrong");
