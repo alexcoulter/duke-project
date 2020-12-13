@@ -1,0 +1,115 @@
+[
+  {
+    "name": "<div class = 'node-text grey-box'>ICE suspects <span class = 'popup-text popup' id='popupFraud'>fraudulent relationship</span></div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text'>Parents provided with <span class = 'popup-text popup' id='popupPrivacy'>privacy statement</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text green-box'>DNA samples collected <span class = 'popup-text popup' id='popupDNACollection'> ( More Info )</span></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text grey-box'><span class = 'popup-text popup' id='popupRapidTest'>Rapid DNA Test </span> run</div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text grey-box'><p>During the Rapid DNA test, the samples are destroyed</p></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text grey-box'>DNA profiles compared</div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text yellow-box'><span class = 'popup-text popup' id='popupInconclusive'>Inconclusive result</span></div>"
+                          },
+                          {
+                            "name": "<div class = 'node-text green-box'>> 99.5% match = confirmed relationship </div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'>Test results entered into <span class = 'popup-text popup' id='popupSharepoint'>Sharepoint file</span></div>"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "<div class = 'node-text red-box'>< 99.5% match = no confirmed relationship (can be <span class = 'popup-text popup' id= 'popupContesting'>contested</span> )</div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'>Test results entered into <span class = 'popup-text popup' id='popupSharepoint'>Sharepoint file</span></div>",
+                                "children": [
+                                  {
+                                    "name": "<div class = 'node-text grey-box'>If ICE pursues investigation, test results entered into <span class = 'popup-text popup' id= 'popupInvestigation'>ICM</span> )</div>"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>Parents not provided with <span class = 'popup-text popup' id='popupPrivacy'>privacy statement</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text red-box'>No collection, but may have negative results <span class = 'popup-text popup' id='popupPrivacy'>( Learn More )</span></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text grey-box'><p>ICE can get warrant</p></div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text green-box'>DNA samples collected <span class = 'popup-text popup' id='popupDNACollection'> ( More Info )</span></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text grey-box'><span class = 'popup-text popup' id='popupRapidTest'>Rapid DNA Test </span> run</div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text grey-box'><p>During the Rapid DNA test, the samples are destroyed</p></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'>DNA profiles compared</div>",
+                                "children": [
+                                  {
+                                    "name": "<div class = 'node-text yellow-box'><span class = 'popup-text popup' id='popupInconclusive'>Inconclusive result</span></div>"
+                                  },
+                                  {
+                                    "name": "<div class = 'node-text green-box'>> 99.5% match = confirmed relationship </div>",
+                                    "children": [
+                                      {
+                                        "name": "<div class = 'node-text grey-box'>Test results entered into <span class = 'popup-text popup' id='popupSharepoint'>Sharepoint file</span></div>"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "<div class = 'node-text red-box'>< 99.5% match = no confirmed relationship (can be <span class = 'popup-text popup' id= 'popupContesting'>contested</span> )</div>",
+                                    "children": [
+                                      {
+                                        "name": "<div class = 'node-text grey-box'>Test results entered into <span class = 'popup-text popup' id='popupSharepoint'>Sharepoint file</span></div>",
+                                        "children": [
+                                          {
+                                            "name": "<div class = 'node-text grey-box'>If ICE pursues investigation, test results entered into <span class = 'popup-text popup' id= 'popupInvestigation'>ICM</span></div>"
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

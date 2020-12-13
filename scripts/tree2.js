@@ -6,7 +6,7 @@ function fillModal(id) {
   switch(id) {
     case "popupFIHS":
      $("#modalTitle").text("FBI Identity History Summary");
-     $("#modalBody").html(`<p> An FBI Identity History Summary is a “listing of certain information taken from fingerprint submissions kept by the FBI.” It includes information related to arrests and sometimes immigration status. For more information on FBI Identity History Summaries including how to request one and how to challenge one, please go to <a href='https://www.fbi.gov/services/cjis/identity-history-summary-checks' target="_blank">https://www.fbi.gov/services/cjis/identity-history-summary-checks</a>.</p>
+     $("#modalBody").html(`<p> An FBI Identity History Summary is a “listing of certain information taken from fingerprint submissions kept by the FBI.” It includes information related to arrests and sometimes immigration status. For more information on FBI Identity History Summaries including how to request one and how to challenge one, please click here - <a href='https://www.fbi.gov/services/cjis/identity-history-summary-checks' target="_blank">https://www.fbi.gov/services/cjis/identity-history-summary-checks</a>.</p>
      `);
       break;
     case "popupExemptions":

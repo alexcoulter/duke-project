@@ -42,7 +42,7 @@ function propogateChoices(id) {
 
     case "2":
       var li = $("<li>").text("I am the family member of a migrant seeking a family-based visa").attr("data-id", 5).addClass("item i01");
-      var li2 = $("<li>").text("I am a migrant crossing the border with members of my family").attr("data-id", 2).addClass("item i02");
+      var li2 = $("<li>").text("I am a migrant crossing the border with members of my family").attr("data-id", 6).addClass("item i02");
       var li3 = $("<li>").text("I am a parent who has been detained and separated from my child").attr("data-id", 3).addClass("item i03");
       var li4 = $("<li>").text("I am a child who has been separated from my parent").attr("data-id", 4).addClass("item i04");
       $("#textChoices").append(li, li2, li3, li4);
@@ -102,6 +102,10 @@ function redirectUser(id) {
       // localStorage.setItem("tree", "treeData2.json");
       window.location.href = 'familyVisa.html';
       break;
+      case "6":
+        // localStorage.setItem("tree", "treeData2.json");
+        window.location.href = 'familyBorder.html';
+        break;
       case "9":
       window.location.href = 'recovered.html';
       break;
