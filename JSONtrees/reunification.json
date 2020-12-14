@@ -1,0 +1,62 @@
+[
+  {
+    "name": "<div class = 'node-text'><p  class='h6' class='h6'>Reunification</p></div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><p  class='h6'>Born in <span class = 'popup-text popup' id='popupWedlock'>Wedlock</span></p></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>Accepts biological relationship</p><button class = 'popup-btn popup' id='popupBio'>+</button></div>",
+            "outcome": "pos"
+          },
+          {
+            "name": "<div class = 'node-text'><p class='h6'>Suspects fraudulent  relationship </p> </div>",
+            "outcome": "neg",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>Consular office establishes proof</p><button class = 'popup-btn popup' id='popupConsular'>+</button></div>",
+                "outcome": "pos"
+              },
+              { "name": "<div class = 'node-text'><p>Voluntary DNA test</p><button class = 'popup-btn popup' id='popupVoluntary'>+</button></div>" },
+              {
+                "name": "<div class = 'node-text'><p>Abandons citizenship claim</p><button class = 'popup-btn popup' id='popupAbandon'>+</button></div>",
+                "outcome": "neg"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'>Born out of <span class = 'popup-text popup' id='popupWedlock'>Wedlock</span></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>Born to US Citizen Father </p></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>Accepts biological relationship</p><button class = 'popup-btn popup' id='popupBio'>+</button></div>",
+                "outcome": "pos"
+              },
+              {
+                "name": "<div class = 'node-text'><p class='h6'>Suspects fraudulent  relationship </p><button class = 'popup-btn popup' id='popupFraud'>+</button></div>",
+                "outcome": "neg"
+              }
+            ]
+          },
+          {
+            "name": "<div class = 'node-text'><p  class='h6'>Born to US Citizen Mother</p><p> <a href='https://www.law.cornell.edu/uscode/text/8/1409' target='_'> 8 USC §1409c </a> | Conditions for Citizenship</p></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text'><p>Accepts biological relationship</p><button class = 'popup-btn popup' id='popupBio'>+</button></div",
+                "outcome": "pos"
+              },
+              {
+                "name": "<div class = 'node-text'><p class='h6'>Suspects fraudulent  relationship</p><button class = 'popup-btn popup' id='popupFraud'>+</button></div>",
+                "outcome": "neg"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

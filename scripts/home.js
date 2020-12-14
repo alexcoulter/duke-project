@@ -5,9 +5,9 @@ $.when($("#titleHeader").fadeTo(1000, 1))
     $("#titleHeader").addClass("animate__pulse");
   });
 
-  //Hide Navbar Links on click
-  $('.navbar-nav>li>a').on('click', function(){
-    $('.navbar-collapse').collapse('hide');
+//Hide Navbar Links on click
+$('.navbar-nav>li>a').on('click', function () {
+  $('.navbar-collapse').collapse('hide');
 });
 
 //displays user choices list on button click
@@ -31,9 +31,9 @@ function propogateChoices(id) {
   switch (id) {
     case "1":
       var li = $("<li>").text("I am a migrant seeking a family-based visa").attr("data-id", 1).addClass("item i01");
-      var li2 = $("<li>").text("I am a migrant seeking asylum").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I am a migrant who has entered the country without inspection").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I am a migrant who is seeking a temporary work visa").attr("data-id", 4).addClass("item i04");
+      var li2 = $("<li>").text("I am a migrant who has entered the country without inspection").attr("data-id", 2).addClass("item i02");
+      var li3 = $("<li>").text("I am a migrant crossing the border with family members").attr("data-id", 3).addClass("item i03");
+      var li4 = $("<li>").text("I am a migrant who has been separated from my child/parent at the border").attr("data-id", 4).addClass("item i04");
       // $("#textChoices").fadeTo( "fast", 1 );
       $("#textChoices").append(li, li2, li3, li4);
       fadeInList();
@@ -41,32 +41,32 @@ function propogateChoices(id) {
       break;
 
     case "2":
-      var li = $("<li>").text("I am the family member of a migrant seeking a family-based visa").attr("data-id", 5).addClass("item i01");
-      var li2 = $("<li>").text("I am a migrant crossing the border with members of my family").attr("data-id", 6).addClass("item i02");
-      var li3 = $("<li>").text("I am a parent who has been detained and separated from my child").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I am a child who has been separated from my parent").attr("data-id", 4).addClass("item i04");
+      var li = $("<li>").text("I am a U.S. based family member of an individual seeking a family based visa").attr("data-id", 5).addClass("item i01");
+      var li2 = $("<li>").text("I am a parent seeking a Consular Report of Birth Abroad for my foreign born child").attr("data-id", 6).addClass("item i02");
+      var li3 = $("<li>").text("I am the family member of a missing migrant and I would like to submit a Family Reference Sample").attr("data-id", 7).addClass("item i03");
+      var li4 = $("<li>").text("I have a family member who has been detained by Customs and Border Patrol").attr("data-id", 8).addClass("item i04");
       $("#textChoices").append(li, li2, li3, li4);
       fadeInList();
       // $("#textChoices").fadeTo( "fast", 1 );
       window.location.href = "#textChoices";
       break;
 
-    case "3":
-      var li = $("<li>").text("I am a government official who has recovered unidentified human remains at the border").attr("data-id", 9).addClass("item i01");
-      var li2 = $("<li>").text("I am a government official ....").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I am a government official ....").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I am a government official ....").attr("data-id", 4).addClass("item i04");
-      $("#textChoices").append(li, li2, li3, li4);
-      // $("#textChoices").fadeTo( "fast", 1 );
-      fadeInList();
-      window.location.href = "#textChoices";
-      break;
+    // case "3":
+    //   var li = $("<li>").text("I am a government official who has recovered unidentified human remains at the border").attr("data-id", 9).addClass("item i01");
+    //   var li2 = $("<li>").text("I am a government official ....").attr("data-id", 2).addClass("item i02");
+    //   var li3 = $("<li>").text("I am a government official ....").attr("data-id", 3).addClass("item i03");
+    //   var li4 = $("<li>").text("I am a government official ....").attr("data-id", 4).addClass("item i04");
+    //   $("#textChoices").append(li, li2, li3, li4);
+    //   // $("#textChoices").fadeTo( "fast", 1 );
+    //   fadeInList();
+    //   window.location.href = "#textChoices";
+    //   break;
 
     case "4":
-      var li = $("<li>").text("I have a spouse who was born in the United States").attr("data-id", 1).addClass("item i01");
-      var li2 = $("<li>").text("I have a spouse who was not born in the United States but has lived here for 5 years").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I have a spouse who was detained at the border").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I have a spouse who was taken into custody").attr("data-id", 4).addClass("item i04");
+      var li = $("<li>").text("I represent a client who has been detained by Customs and Border Patrol").attr("data-id", 9).addClass("item i01");
+      var li2 = $("<li>").text("I represent a client who has been separated from their parent/child at the border").attr("data-id", 10).addClass("item i02");
+      var li3 = $("<li>").text("...").attr("data-id", 11).addClass("item i03");
+      var li4 = $("<li>").text("...").attr("data-id", 12).addClass("item i04");
       $("#textChoices").append(li, li2, li3, li4);
       // $("#textChoices").fadeTo( "fast", 1 );
       // fadeInList();
@@ -84,31 +84,48 @@ function redirectUser(id) {
   switch (id) {
     case "1":
       // localStorage.setItem("tree", "treeData2.json");
-      window.location.href = 'migrantVisa.html';
+      window.location.href = 'familyVisaApp.html';
       break;
     case "2":
       // localStorage.setItem("tree", "treeData3.json");
-      window.location.href = 'tree2.html';
+      window.location.href = 'detained.html';
       break;
     case "3":
       // localStorage.setItem("tree", "treeData3.json");
-      window.location.href = 'tree2.html';
+      window.location.href = 'familyBorder.html';
       break;
     case "4":
       // localStorage.setItem("tree", "treeData4.json");
-      window.location.href = 'tree4.html';
+      window.location.href = 'reunification.html';
       break;
-      case "5":
+    case "5":
       // localStorage.setItem("tree", "treeData2.json");
-      window.location.href = 'familyVisa.html';
+      window.location.href = 'familyVisaPet.html';
       break;
-      case "6":
-        // localStorage.setItem("tree", "treeData2.json");
-        window.location.href = 'familyBorder.html';
+    case "6":
+      // localStorage.setItem("tree", "treeData2.json");
+      window.location.href = 'familyVisaPet.html';
+      break;
+    case "7":
+      // localStorage.setItem("tree", "treeData2.json");
+      window.location.href = 'missing.html';
+      break;
+    case "8":
+      // localStorage.setItem("tree", "treeData2.json");
+      window.location.href = 'detained.html';
+      break;
+    case "9":
+      window.location.href = 'detained.html';
+      break;
+      case "10":
+      window.location.href = 'reunification.html';
+      break;
+      case "11":
+      window.location.href = 'unknown.html';
+      break;
+      case "12":
+        window.location.href = 'unknown.html';
         break;
-      case "9":
-      window.location.href = 'recovered.html';
-      break;
     default:
       alert("something went wrong");
       break;

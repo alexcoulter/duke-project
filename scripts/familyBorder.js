@@ -1,5 +1,5 @@
 var tree = "JSONtrees/familyBorder.json";
-var levels = 11; 
+var levels = 12; 
 treeHeight = 700;
 
 function fillModal(id) {

@@ -1,0 +1,48 @@
+[
+  {
+    "name": "<div class = 'node-text grey-box'><p>U.S. Based Family Member Begins Process <span class = 'popup-text popup' id='popupBegin'>--> Learn More</span></p></div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text grey-box'><p><span class = 'popup-text popup' id='popupEmbassy'>U.S. Embassy / Consulate </span> receives test kit</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>Schedule appointment and pay <span class = 'popup-text popup' id='popupFees'> fees </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text green-box'><p>Samples collected at U.S. Embassy/ Consulate <span class = 'popup-text popup' id='popupSample'> --> Learn More</span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text grey-box'><p>Samples sent back to AABB lab in the U.S.</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text grey-box'><p>DNA profiles compared</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text green-box'><p>> 99.5% match = confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process continues</p></div>"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "<div class = 'node-text red-box'><p>< 99.5% match = no confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process likely ends</p></div>"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
