@@ -3,7 +3,7 @@
     "name": "<div class = 'node-text grey-box'><p>Detained by CPB/ICE</p></div>",
     "children": [
       {
-        "name": "<div class = 'node-text'><p>I already provided DNA for storage in CODIS </p></div>",
+        "name": "<div class = 'node-text'><p>I already provided DNA for storage in CODIS </p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
         "children": [
           {
             "name": "<div class = 'node-text red-box'><p>No collection</p></div>",
@@ -12,10 +12,10 @@
         ]
       },
       {
-        "name": "<div class = 'node-text'><p>I have not provided DNA for storage in CODIS</p></div>",
+        "name": "<div class = 'node-text'><p>I have not provided DNA for storage in CODIS</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
         "children": [
           {
-            "name": "<div class = 'node-text'><p>I am subject to one or more <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></p></div>",
+            "name": "<div class = 'node-text'><p>I am subject to one or more <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
             "children": [
               {
                 "name": "<div class = 'node-text red-box'><p>No collection</p></div>",
@@ -24,16 +24,16 @@
             ]
           },
           {
-            "name": "<div class = 'node-text'><p  class='h6'>I am not subject to any <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></p></div>",
+            "name": "<div class = 'node-text'><p  class='h6'>I am not subject to any <span class = 'popup-text popup' id='popupExemptions'>exemptions</span></p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
             "children": [
               {
-                "name": "<div class = 'node-text grey-box'><p>DNA sample will be collected by CPB, refusal to submit to collection is a 'misdemeanor'</p></div>",
+                "name": "<div class = 'node-text grey-box'><p>DNA sample will be collected by CPB, refusal to submit to collection is a 'misdemeanor'</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                 "children": [
                   {
-                    "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p></div>",
+                    "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                     "children": [
                       {
-                        "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p></div>",
+                        "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                         "children": [
                           {
                             "name": "<div class = 'node-text green-box'><p>DNA stored in NDIS</p><button class = 'popup-btn popup' id='popupNDIS'>+</button></div>"
@@ -41,16 +41,16 @@
                         ]
                       },
                       {
-                        "name": "<div class = 'node-text'><p>If sample is unusable, CBP may attemp to retake sample, if individual remains in custody</p></div>",
+                        "name": "<div class = 'node-text'><p>If sample is unusable, CBP may attemp to retake sample, if individual remains in custody</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                         "children": [
                           {
                             "name": "<div class = 'node-text yellow-box'><p>If individual is no longer in CBP or ICE custody, no retaking of sample</p></div>"
                           },
                           {
-                            "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p></div>",
+                            "name": "<div class = 'node-text grey-box'><p>DNA sample will be sent to FBI Laboratory</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                             "children": [
                               {
-                                "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p></div>",
+                                "name": "<div class = 'node-text'><p>Is sample is 'usable' FBI produces a <span class = 'popup-text popup' id='popupProfile'>DNA profile</span></p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                                 "children": [
                                   {
                                     "name": "<div class = 'node-text green-box'><p>DNA stored in NDIS</p><button class = 'popup-btn popup' id='popupNDIS'>+</button></div>"
@@ -70,7 +70,7 @@
         ]
       },
       {
-        "name": "<div class = 'node-text'><p>I am not sure if I have already provided DNA for storage in CODIS </p></div>",
+        "name": "<div class = 'node-text'><p>I am not sure if I have already provided DNA for storage in CODIS </p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
         "outcome": "pos",
         "children": [
           {
