@@ -1,6 +1,6 @@
 var tree = "JSONtrees/noPaperwork.json";
-var levels = 9;
-treeHeight = 700;
+var levels = 10;
+treeHeight = 1000;
 
 
 function fillModal(id) {

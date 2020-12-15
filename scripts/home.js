@@ -22,7 +22,7 @@ $(".data-button").click(function () {
 });
 
 $("#textChoices").bind("click", function (e) {
-  console.log(e.target.getAttribute("data-id"));
+  // console.log(e.target.getAttribute("data-id"));
   redirectUser(e.target.getAttribute("data-id"));
 });
 

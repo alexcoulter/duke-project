@@ -6,36 +6,57 @@
         "name": "<div class = 'node-text'><p>This is the first time I have been detained in the United States</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
         "children": [
           {
-            "name": "<div class = 'node-text'><p>Schedule appointment and pay <span class = 'popup-text popup' id='popupFees'> fees </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+            "name": "<div class = 'node-text grey-box'><p>Do you qualify for any exemptions? <span class = 'popup-text popup' id='popup1'> (More Info) </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
             "children": [
               {
-                "name": "<div class = 'node-text green-box'><p>Samples collected at U.S. Embassy/ Consulate <span class = 'popup-text popup' id='popupSample'> --> Learn More</span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                "name": "<div class = 'node-text'><p>I do not qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                 "children": [
                   {
-                    "name": "<div class = 'node-text grey-box'><p>Samples sent back to AABB lab in the U.S.</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                    "name": "<div class = 'node-text green-box'><p>Immigration officials will collect a DNA sample from you. If you refuse, you may face criminal charges</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                     "children": [
                       {
-                        "name": "<div class = 'node-text grey-box'><p>DNA profiles compared</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                        "name": "<div class = 'node-text grey-box'><p>Your DNA sample will be sent to an FBI laboratory for analysis. The lab will use your DNA sample to create a DNA profile</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                         "children": [
                           {
-                            "name": "<div class = 'node-text green-box'><p>> 99.5% match = confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
-                            "children": [
-                              {
-                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process continues</p></div>"
-                              }
-                            ]
+                            "name": "<div class = 'node-text green-box'><p>If the lab produces a DNA profile, it will be stored in a federal database.</p><span class = 'popup-text popup' id='popup4'> (Learn More) </span></div>"
                           },
                           {
-                            "name": "<div class = 'node-text red-box'><p>< 99.5% match = no confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "name": "<div class = 'node-text'><p>If the lab cannot produce a DNA profile, immigration officials may try to collect another sample. </p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
                             "children": [
                               {
-                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process likely ends</p></div>"
+                                "name": "<div class = 'node-text grey-box'><p>If you are still in custody, they may collect another sample and send it to back to the lab</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                                "children": [
+                                  {
+                                    "name": "<div class = 'node-text green-box'><p>If the lab produces a DNA profile, it will be stored in a federal database<span class = 'popup-text popup' id='popup4'> (Learn More) </span></p></div>"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "<div class = 'node-text red-box'><p>If you are no longer in custody, immigration officials cannot require you to provide another DNA sample</p></div>"
                               }
                             ]
                           }
                         ]
                       }
                     ]
+                  }
+                ]
+              },
+              {
+                
+                  "name": "<div class = 'node-text'><p>I do not know if I qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                  "children": [
+                    {
+                      "name": "<div class = 'node-text yellow-box'><p>You should contact a lawyer or legal aid organization as soon as possible <span class = 'popup-text popup' id='popup3'>(Resources) </span></p></div>"
+                    }
+                  ]
+                
+              },
+              {
+                "name": "<div class = 'node-text'><p>I know I qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text red-box'><p>You should not be required to provide a DNA sample <span class = 'popup-text popup' id='popup2'> (Resources) </span></p></div>"
                   }
                 ]
               }
@@ -48,27 +69,81 @@
         "children": [
           {
             "name": "<div class = 'node-text'><p>While detained, I provided law enforcement a blood and/or saliva sample</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
-              "children": [
-                {
-                  "name": "<div class = 'node-text'><p>Immigration officials will conduct a search to confirm that you have previously provided a DNA sample. If you have, they will not collect another sample</p></div>"
-                }
-              ]   
+            "children": [
+              {
+                "name": "<div class = 'node-text red-box'>Immigration officials will conduct a search to confirm that you have previously provided a DNA sample. If you have, they will not collect another sample</div>"
+              }
+            ]
           },
           {
             "name": "<div class = 'node-text'><p>While detained, I did not provide law enforcement a blood and/or saliva sample</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
-              "children": [
-                {
-                  "name": "<div class = 'node-text'><p>Do you qualify for any exemptions?<span class = 'popup-text popup' id='popup1'> --> More Info </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>"
-                }
-              ]   
+            "children": [
+              {
+                "name": "<div class = 'node-text grey-box'><p>Do you qualify for any exemptions? <span class = 'popup-text popup' id='popup1'> (More Info) </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text'><p>I do not qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text green-box'><p>Immigration officials will collect a DNA sample from you. If you refuse, you may face criminal charges</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text grey-box'><p>Your DNA sample will be sent to an FBI laboratory for analysis. The lab will use your DNA sample to create a DNA profile</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text green-box'><p>If the lab produces a DNA profile, it will be stored in a federal database.</p><span class = 'popup-text popup' id='popup4'> (Learn More) </span></div>"
+                              },
+                              {
+                                "name": "<div class = 'node-text'><p>If the lab cannot produce a DNA profile, immigration officials may try to collect another sample. </p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                                "children": [
+                                  {
+                                    "name": "<div class = 'node-text grey-box'><p>If you are still in custody, they may collect another sample and send it to back to the lab</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                                    "children": [
+                                      {
+                                        "name": "<div class = 'node-text green-box'><p>If the lab produces a DNA profile, it will be stored in a federal database<span class = 'popup-text popup' id='popup4'> (Learn More) </span></p></div>"
+                                      }
+                                    ]
+                                  },
+                                  {
+                                    "name": "<div class = 'node-text red-box'><p>If you are no longer in custody, immigration officials cannot require you to provide another DNA sample</p></div>"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    
+                      "name": "<div class = 'node-text'><p>I do not know if I qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                      "children": [
+                        {
+                          "name": "<div class = 'node-text yellow-box'><p>You should contact a lawyer or legal aid organization as soon as possible <span class = 'popup-text popup' id='popup3'>(Resources) </span></p></div>"
+                        }
+                      ]
+                    
+                  },
+                  {
+                    "name": "<div class = 'node-text'><p>I know I qualify for one of the exemptions</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text red-box'><p>You should not be required to provide a DNA sample <span class = 'popup-text popup' id='popup2'> (Resources) </span></p></div>"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "<div class = 'node-text'><p>I am not sure if I provided law enforcement a blood and/or saliva sample while detained</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
-              "children": [
-                {
-                  "name": "<div class = 'node-text'><p>Immigration officials will conduct a search to determine if you have previously provided DNA</p> </div>"
-                }
-              ]   
+            "children": [
+              {
+                "name": "<div class = 'node-text yellow-box'><p>Immigration officials will conduct a search to determine if you have previously provided DNA</p> </div>"
+              }
+            ]
           }
         ]
       }
