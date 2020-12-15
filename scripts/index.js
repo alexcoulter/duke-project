@@ -21,6 +21,7 @@ textbox_w = 240, //was 336
 
 var container = document.getElementById("treeContainer");
 
+
 var svg = d3
   .select(container)
   .append("svg")
