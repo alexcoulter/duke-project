@@ -440,6 +440,6 @@ function buildRecap(d) {
     recap += recapArray[i] + "<i class='fas fa-arrow-right summary-arrow'></i>";
   }
   recap += recapArray[recapArray.length - 1] + "</p>";
-  // console.log(recap);
+  console.log(recap);
 }
 

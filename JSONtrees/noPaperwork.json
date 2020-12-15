@@ -1,0 +1,77 @@
+[
+  {
+    "name": "<div class = 'node-text grey-box'><p>I have been detained by immigration officials</p></div>",
+    "children": [
+      {
+        "name": "<div class = 'node-text'><p>This is the first time I have been detained in the United States</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>Schedule appointment and pay <span class = 'popup-text popup' id='popupFees'> fees </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+            "children": [
+              {
+                "name": "<div class = 'node-text green-box'><p>Samples collected at U.S. Embassy/ Consulate <span class = 'popup-text popup' id='popupSample'> --> Learn More</span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                "children": [
+                  {
+                    "name": "<div class = 'node-text grey-box'><p>Samples sent back to AABB lab in the U.S.</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                    "children": [
+                      {
+                        "name": "<div class = 'node-text grey-box'><p>DNA profiles compared</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                        "children": [
+                          {
+                            "name": "<div class = 'node-text green-box'><p>> 99.5% match = confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process continues</p></div>"
+                              }
+                            ]
+                          },
+                          {
+                            "name": "<div class = 'node-text red-box'><p>< 99.5% match = no confirmed relationship</p><i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+                            "children": [
+                              {
+                                "name": "<div class = 'node-text grey-box'><p>Results sent back to Embassy / Consulate and application process likely ends</p></div>"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "<div class = 'node-text'><p>I have previously been detained in the United States</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+        "children": [
+          {
+            "name": "<div class = 'node-text'><p>While detained, I provided law enforcement a blood and/or saliva sample</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+              "children": [
+                {
+                  "name": "<div class = 'node-text'><p>Immigration officials will conduct a search to confirm that you have previously provided a DNA sample. If you have, they will not collect another sample</p></div>"
+                }
+              ]   
+          },
+          {
+            "name": "<div class = 'node-text'><p>While detained, I did not provide law enforcement a blood and/or saliva sample</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+              "children": [
+                {
+                  "name": "<div class = 'node-text'><p>Do you qualify for any exemptions?<span class = 'popup-text popup' id='popup1'> --> More Info </span></p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>"
+                }
+              ]   
+          },
+          {
+            "name": "<div class = 'node-text'><p>I am not sure if I provided law enforcement a blood and/or saliva sample while detained</p> <i class='fas fa-arrow-right'></i><i class='fas fa-arrow-left hidden'></i></div>",
+              "children": [
+                {
+                  "name": "<div class = 'node-text'><p>Immigration officials will conduct a search to determine if you have previously provided DNA</p> </div>"
+                }
+              ]   
+          }
+        ]
+      }
+    ]
+  }
+]

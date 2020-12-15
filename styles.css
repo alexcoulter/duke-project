@@ -586,9 +586,9 @@ padding: 15px;
   0 10px 10px 0 rgba(0, 0, 0, .26), 0 10px 10px 0 rgba(0, 0, 0, .22);
 }
 
-.about-text h4 {
+.cursive {
   font-family: 'Italianno', cursive;
-  font-size: 32px;
+  font-size: 38px;
   /* font-weight: bold; */
 }
 

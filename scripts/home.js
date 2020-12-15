@@ -30,10 +30,10 @@ $("#textChoices").bind("click", function (e) {
 function propogateChoices(id) {
   switch (id) {
     case "1":
-      var li = $("<li>").text("I am a migrant seeking a family-based visa").attr("data-id", 1).addClass("item i01");
-      var li2 = $("<li>").text("I am a migrant who has entered the country without inspection").attr("data-id", 2).addClass("item i02");
-      var li3 = $("<li>").text("I am a migrant crossing the border with family members").attr("data-id", 3).addClass("item i03");
-      var li4 = $("<li>").text("I am a migrant who has been separated from my child/parent at the border").attr("data-id", 4).addClass("item i04");
+      var li = $("<li>").text("I have entered the country without paperwork").attr("data-id", 1).addClass("item i01");
+      var li2 = $("<li>").text("I am seeking a family-based visa").attr("data-id", 2).addClass("item i02");
+      var li3 = $("<li>").text("I am crossing the border with my family").attr("data-id", 3).addClass("item i03");
+      var li4 = $("<li>").text("I have been separated from my family at the border").attr("data-id", 4).addClass("item i04");
       // $("#textChoices").fadeTo( "fast", 1 );
       $("#textChoices").append(li, li2, li3, li4);
       fadeInList();
@@ -41,11 +41,11 @@ function propogateChoices(id) {
       break;
 
     case "2":
-      var li = $("<li>").text("I am a U.S. based family member of an individual seeking a family based visa").attr("data-id", 5).addClass("item i01");
-      var li2 = $("<li>").text("I am a parent seeking a Consular Report of Birth Abroad for my foreign born child").attr("data-id", 6).addClass("item i02");
-      var li3 = $("<li>").text("I am the family member of a missing migrant and I would like to submit a Family Reference Sample").attr("data-id", 7).addClass("item i03");
-      var li4 = $("<li>").text("I have a family member who has been detained by Customs and Border Patrol").attr("data-id", 8).addClass("item i04");
-      $("#textChoices").append(li, li2, li3, li4);
+      var li = $("<li>").text("I am sponsoring my relative's visa").attr("data-id", 5).addClass("item i01");
+      var li2 = $("<li>").text("I need a Consular Report of Birth Abroad for my child").attr("data-id", 6).addClass("item i02");
+      var li3 = $("<li>").text("My family member has been detained by immigration officials").attr("data-id", 7).addClass("item i03");
+      // var li4 = $("<li>").text("I have a family member who has been detained by Customs and Border Patrol").attr("data-id", 8).addClass("item i04");
+      $("#textChoices").append(li, li2, li3);
       fadeInList();
       // $("#textChoices").fadeTo( "fast", 1 );
       window.location.href = "#textChoices";
@@ -84,11 +84,11 @@ function redirectUser(id) {
   switch (id) {
     case "1":
       // localStorage.setItem("tree", "treeData2.json");
-      window.location.href = 'familyVisaApp.html';
+      window.location.href = 'noPaperwork.html';
       break;
     case "2":
       // localStorage.setItem("tree", "treeData3.json");
-      window.location.href = 'detained.html';
+      window.location.href = 'familyVisaApp.html';
       break;
     case "3":
       // localStorage.setItem("tree", "treeData3.json");
@@ -108,7 +108,7 @@ function redirectUser(id) {
       break;
     case "7":
       // localStorage.setItem("tree", "treeData2.json");
-      window.location.href = 'missing.html';
+      window.location.href = 'noPaperwork.html';
       break;
     case "8":
       // localStorage.setItem("tree", "treeData2.json");
@@ -124,7 +124,7 @@ function redirectUser(id) {
       window.location.href = 'unknown.html';
       break;
       case "12":
-        window.location.href = 'unknown.html';
+        window.location.href = 'migrantVisa.html';
         break;
     default:
       alert("something went wrong");
