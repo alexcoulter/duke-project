@@ -1,0 +1,37 @@
+[
+  {
+    "name": "<p>Grandpa Joe</p>",
+    "children": [
+      {
+        "name": "<p> Steve</p>",
+        "children": [
+          {
+            "name": "<p>Steve jr</p>"
+          }
+        ]
+      },
+      {
+        "name": "<p> Julia</p>",
+        "children": [
+          {
+            "name": "<p>Julia jr</p>"
+          },
+          {
+            "name": "<p>Frederick</p>"
+          }
+        ]
+      },
+      {
+        "name": "<p> Chris</p>",
+        "children": [
+          {
+            "name": "<p>Sara</p>"
+          },
+          {
+            "name": "<p>Bethany</p>"
+          }
+        ]
+      }
+    ]
+  }
+]

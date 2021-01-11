@@ -1,8 +1,5 @@
 //based on https://bl.ocks.org/d3noob/43a860bc0024792f8803bba8ca0d5ecd by d3noob
-
-
-// console.log(tree);
-var stateSelect = "";
+let recap = "";
 let translate = 0;
 let expanded = false;
 //show default view
@@ -13,15 +10,13 @@ var colorScale = d3.scaleOrdinal("schemeSet2");
 
 // Set the dimensions and margins of the diagram
 var margin = { top: 0, right: 90, bottom: 30, left: 90 },
-textbox_w = 240, //was 336
+  textbox_w = 240, //was 336
   textbox_h = 90; //heuristic: minimal 88 is needed for title + 2 laws
-  // width = 2200 - margin.left - margin.right,
   width = (textbox_w + 20) * levels + margin.left + margin.right,
   height = treeHeight - margin.top - margin.bottom;
 
+//Adds D3.js tree to the ID named 'treeContainer' in the HTML
 var container = document.getElementById("treeContainer");
-
-
 var svg = d3
   .select(container)
   .append("svg")
@@ -42,7 +37,6 @@ var treemap = d3.tree().size([height, width]);
 
 function collapse(d) {
   if (d.children) {
-
     d._children = d.children;
     d._children.forEach(collapse);
     d.children = null;
@@ -51,32 +45,13 @@ function collapse(d) {
 
 function redraw(data) {
   d3.json(data, function (error, treeData0) {
-    if(stateSelect == "California") {
-      treeData = treeData0[0].children[0];
-    }
-    else if(stateSelect == "Arizona") {
-      treeData = treeData0[0].children[1];
-    }
-    else if(stateSelect == "NewMexico") {
-      treeData = treeData0[0].children[2];
-    }
-    else if(stateSelect == "Texas") {
-      treeData = treeData0[0].children[3];
-    }
-    else if(stateSelect == "Other") {
-      treeData = treeData0[0].children[4];
-    }
-    else {
-      treeData = treeData0[0];
-    }
-
+    treeData = treeData0[0];
     root = d3.hierarchy(treeData, function (d) {
       return d.children;
     });
     root.x0 = height / 2;
     root.y0 = 0;
     root.children.forEach(collapse);
-
     update(root);
   });
 }
@@ -95,15 +70,14 @@ function update(source) {
   });
 
   // ****************** Nodes section ***************************
-
   // Update the nodes...
   var node = svg.selectAll("g.node").data(nodes, function (d) {
     return d.id || (d.id = ++i);
   });
 
-  // ****************** Tooltip ***************************
-  // Define 'div' for tooltips
 
+
+  // ****************** Tooltip ***************************
   var div = d3
     .select(container)
     .append("div") // declare the tooltip div
@@ -117,35 +91,23 @@ function update(source) {
     .attr("class", "node")
     .attr("transform", function (d) {
       let widthDiff = width - window.innerWidth;
-      // let levels = 6;
-      let screenShift = (widthDiff / levels) + 10;
-      let depth = d.depth + 1;
-      if (depth > 2) {
+      let screenShift = (widthDiff / levels) + 30;
+      let depth = d.depth;
+      if (depth > 1) {
         scrollScreen(depth * screenShift);
       }
-      
+
       return "translate(" + source.y0 + "," + source.x0 + ")";
     })
     .on("click", delayClick);
 
-  // ****************** Nodes section ***************************
-  //add rect as node
-  // nodeEnter
-  //   .append("rect")
-  //   .attr("class", "node")
-  //   .attr("width", 1e-6)
-  //   .attr("height", 1e-6)
-  //   .attr("padding", 8)
-  //   .style("fill", function (d) {
-  //     return d._children ? "lightsteelblue" : "#fff";
-  //   });
 
-  // ****************** Symbol section ***************************
-  // var customSqr = d3.symbol().type(d3.symbolWye).size(50);
+
+  // ****************** Nodes section ***************************
   nodeEnter
     .append("foreignObject")
     .attr("class", "txt")
-    
+
     .attr("width", textbox_w - 10)
     .attr("height", (d) => (d.data.type === "law" ? textbox_h + 100 : 120)) //adjust this to ensure all text shown
     .style("transform", (d) =>
@@ -162,7 +124,6 @@ function update(source) {
     .append("xhtml:div")
     .style("fill", "black")
     .html(function (d) {
-      // if(d.data.nid == "wham")
       return d.data.name;
     })
     .style("opacity", 0)
@@ -174,9 +135,9 @@ function update(source) {
 
   // Transition to the proper position for the node
   nodeUpdate
-  .transition()
-  .delay(100)
-  .duration(duration * .7)
+    .transition()
+    .delay(100)
+    .duration(duration * .7)
     .attr("transform", function (d) {
       return "translate(" + d.y / 1.0 + "," + d.x / 1.0 + ")";
     });
@@ -186,15 +147,6 @@ function update(source) {
     .attr("class", "node-style")
     .attr("width", (d) => (d.data.type === "law" ? textbox_w : 26))
     .attr("height", (d) => 25)
-    // .style("transform", (d) =>
-    //   d.data.clauses === 3
-    //     ? "translateY(-" + (textbox_h / 2 - 16) + "px)"
-    //     // : d.data.yadjust === "down"
-    //     //   ? "translateY(-" + (textbox_h / 2 - 12) + "px)"
-    //       : d.data.type === "law"
-    //         ? "translateY(-" + textbox_h / 2 + "px)"
-    //         : "translateY(0px)"
-    // )
     .attr("rx", 12)
     .attr("ry", 12)
     .style(
@@ -221,14 +173,12 @@ function update(source) {
     .transition()
     .delay(00)
     .duration(duration * .7)
-    
+
     .attr("transform", function (d) {
-      //Scrolls screen to left 200px
-      // scrollScreen(d.depth * 300 - 600);
       let widthDiff = width - screen.width;
-      let levels = 6;
       let screenShift = widthDiff / levels;
       let depth = d.depth;
+      // console.log(d.depth);
       if (depth > 2) {
         scrollScreen((depth * screenShift) - (screenShift));
       }
@@ -239,22 +189,13 @@ function update(source) {
     })
     .remove();
 
-  // On exit reduce the node circles size to 0
-
-  // nodeExit.select("txt").attr("width", 1e-6).attr("height", 1e-6);
-
-  // On exit reduce the opacity of text labels
-  // nodeExit.select(".txt").style("fill-opacity", 0);
-  // nodeExit.select("foreignObject").attr("width", 1e-6).attr("height", 1e-6);
-
   // On exit reduce the opacity of text labels
   nodeExit.select("foreignObject").delay(100).style("opacity", .0);
 
   // ****************** links section ***************************
-
   // Update the links...
   var link = svg.selectAll("path.link").data(links, function (d) {
-    // d3.selectAll("g").remove();
+    // buildRecap(d);
     return d.id;
   });
 
@@ -262,16 +203,16 @@ function update(source) {
   var linkEnter = link
     .enter()
     .insert("path", "g")
-    .attr("class", function(d) {
-      buildRecap(d);
+    .attr("class", function (d) {
+      // buildRecap(d);
 
-      if(d.data.linkId == "green"){
+      if (d.data.linkId == "green") {
         return "link green-link"
       }
-      else if(d.data.linkId == "red"){
+      else if (d.data.linkId == "red") {
         return "link red-link"
       }
-      else if(d.data.linkId == "solid"){
+      else if (d.data.linkId == "solid") {
         return "link solid-link"
       }
       return "link";
@@ -302,7 +243,7 @@ function update(source) {
     .transition()
     .delay(100)
     .duration(duration * .5)
-    
+
     .attr("d", function (d) {
       var o = { x: source.x, y: source.y };
       return diagonal(o, o);
@@ -331,10 +272,6 @@ function update(source) {
 
   // Toggle children on click.
   function click(d) {
-   
-    // d.data.nid = "show";
-    // console.log(d.data.nid);
-    // d3.select("#hidden1").remove();
     if (expanded === true) {
       return expanded = false;
     }
@@ -343,10 +280,9 @@ function update(source) {
       d._children2 = d.children[0].children;
       d.children = null;
     } else {
-      // translate -= 200;
-      // container.style.transform = "translateX(" + translate + "px" + ")";
       d.children = d._children;
       d._children = null;
+      buildRecap(d);
     }
     update(d);
   }
@@ -368,11 +304,11 @@ $("#homeBtn").on("click", function () {
 });
 
 //Change from right arrow to left arrow on click
-$(document).on("click", ".txt", function(e) {
+$(document).on("click", ".txt", function (e) {
   // console.log($(e.target).attr('class'));
-if(expanded == false) {
+  if (expanded == false) {
     $(this).find("i").toggleClass("hidden").fadeOut(1).fadeIn(700);
-}
+  }
 });
 
 //Expands Modal window on link click
@@ -416,7 +352,7 @@ document.addEventListener('keyup', function (e) {
 });
 
 //Function to animate the Modal closing and fade the background back in
-function exitModal(){
+function exitModal() {
   $(".modal").removeClass("animate__zoomIn");
   $(".modal").addClass("animate__zoomOut");
   $("#tree-page-content, #treeContainer").removeClass("fade-out");
@@ -431,16 +367,15 @@ function buildRecap(d) {
   recapArray = [];
   var newParent = d;
   recapArray.unshift(d.data.text);
-  while(newParent.parent) {
-  recapArray.unshift(newParent.parent.data.text);
-  newParent = newParent.parent;
+  while (newParent.parent) {
+    recapArray.unshift(newParent.parent.data.text);
+    newParent = newParent.parent;
   }
   // console.log(recapArray);
-  recap = "<p class = 'summary'>";
-  for(let i=0; i<recapArray.length -1; i++) {
+  recap = "<div class = 'summary'><h5><b><i><u>YOUR PATH:</h5></b></i></u><p> ";
+  for (let i = 0; i < recapArray.length - 1; i++) {
     recap += recapArray[i] + "<i class='fas fa-arrow-right summary-arrow'></i>";
   }
-  recap += recapArray[recapArray.length - 1] + "</p>";
+  recap += recapArray[recapArray.length - 1];
   // console.log(recap);
 }
-

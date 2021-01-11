@@ -172,8 +172,6 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .32), 0 10px 10px 0 rgba(0, 0, 0, .32)
   border-radius: 10px;
 }
 
-
-
 .modal {
   padding-top: 80px;
   padding-bottom: 150px;
@@ -183,11 +181,13 @@ box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .32), 0 10px 10px 0 rgba(0, 0, 0, .32)
   padding:1.5%;
   border: 2px solid grey;
   border-radius: 10px;
+  background-color: rgb(33, 33, 66);
+  color: white;
 }
 
 .summary-arrow {
   margin: 0 10px;
-  color: rgb(34, 117, 31);
+  color: rgb(66, 172, 62);
 }
 
 .animate__zoomIn {
@@ -351,11 +351,6 @@ a:hover, a:active {
   left: 45%;
   border:1px solid rgb(218, 204, 204);
 }
-
-#detainedBig {
-  
-}
-
 
 
 
@@ -552,9 +547,9 @@ padding: 15px;
   border-radius:0 0 10px 10px ;
 }
 
-#textChoicesDiv {
+/* #textChoicesDiv {
   min-height: 200px;
-}
+} */
 
 .text-choices li {
   font-size: 24px;
@@ -700,6 +695,10 @@ padding: 0 40px;
   .modal-dialog {
     width: 100% !important;
   }
+
+  .text-choices li {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 669px) {
@@ -717,6 +716,11 @@ padding: 0 40px;
   .about-text {
     padding: 5% 5%;
   }
+
+  .text-choices li {
+    font-size: 18px;
+  }
+
 }
 
 @media (max-width: 575px) {
@@ -724,7 +728,14 @@ padding: 0 40px;
   margin-left: 0px;
   margin-right: 0px;
 }
-
+.data-button {
+  width: 50%;
+  min-width: 250px;
+}
+.dropdowns-wrapper {
+  padding-left: 2%;
+  padding-right: 2%;
+}
 }
 /* @media (max-width: 550px) {
   .container, .container-fluid {

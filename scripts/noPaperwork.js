@@ -1,13 +1,14 @@
 var tree = "JSONtrees/noPaperwork.json";
+// var tree = "JSONtrees/demoTree.json";
 var levels = 10;
 treeHeight = 1200;
 
 
 function fillModal(id) {
-  switch(id) {
+  switch (id) {
     case "popup1":
-     $("#modalTitle").text("Exemptions");
-     $("#modalBody").html(`<p>There are a number of reasons why you may not be required to provide a DNA sample. You qualify for an exemption if:</p>
+      $("#modalTitle").text("Exemptions");
+      $("#modalBody").html(`<p>There are a number of reasons why you may not be required to provide a DNA sample. You qualify for an exemption if:</p>
      <ol>
      <li>You are a lawful resident of the United States; </li>
      <li>You are being processed for admission at the border; </li>
@@ -19,7 +20,7 @@ function fillModal(id) {
       break;
     case "popup2":
       $("#modalTitle").text("No DNA collection required");
-     $("#modalBody").html(`<p>  Since you qualify for an exemption, you should not be required to provide a DNA sample. </p>
+      $("#modalBody").html(`<p>  Since you qualify for an exemption, you should not be required to provide a DNA sample. </p>
      `);
       break;
     case "popup3":
@@ -44,12 +45,12 @@ function fillModal(id) {
       <h6><b>How secure is CODIS?</b></h6>
       <p>&nbsp;&nbsp;&nbsp;&nbsp;The computer terminals containing the CODIS are located in a physically secure location and access is restricted to only authorized individuals. </p><br>
       <h6><b>Can I get my information removed from CODIS?</b></h6>
-      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good question! I’m working on an answer… There’s some indication that you can get an expungement, but it is unclear if this applies to immigrant detainees.</p>
+      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Good question! I’m working on an answer… There’s some indication that you can get an expungement, but it is unclear if this applies to immigrant detainees.<br><br>${recap} <i class='fas fa-arrow-right summary-arrow'></i>If the lab produces a DNA profile, it will be stored in a federal database</p>
       `);
       break;
 
     default:
-      alert("something went wrong");
+      alert("sorry! There was an error");
       break;
   }
 }
