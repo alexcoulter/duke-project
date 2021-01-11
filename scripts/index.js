@@ -204,7 +204,7 @@ function update(source) {
     .enter()
     .insert("path", "g")
     .attr("class", function (d) {
-      // buildRecap(d);
+      buildRecap(d);
 
       if (d.data.linkId == "green") {
         return "link green-link"
@@ -282,7 +282,6 @@ function update(source) {
     } else {
       d.children = d._children;
       d._children = null;
-      buildRecap(d);
     }
     update(d);
   }
@@ -366,7 +365,7 @@ function exitModal() {
 function buildRecap(d) {
   recapArray = [];
   var newParent = d;
-  recapArray.unshift(d.data.text);
+  // recapArray.unshift(d.data.text);
   while (newParent.parent) {
     recapArray.unshift(newParent.parent.data.text);
     newParent = newParent.parent;
